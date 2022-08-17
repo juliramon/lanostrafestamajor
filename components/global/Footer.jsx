@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="pt-12 pb-6 relative z-10">
       <div className="container">
         <div className="w-full flex flex-wrap items-center justify-between">
-          <span className="uppercae text-primary-500 text-sm font-fonseca">
+          <span className="uppercae text-primary-500 text-sm font-fonseca hidden md:block">
             01.04.2023
           </span>
           <span className="uppercase text-primary-500 text-sm font-fonseca">

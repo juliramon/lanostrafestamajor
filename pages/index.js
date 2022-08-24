@@ -7,7 +7,19 @@ const Home = () => {
   return (
     <>
       <Head>
+        <meta charSet="UTF-8"></meta>
+        <meta
+          content="width=device-width, initial-scale=1.0, minimum-scale=1"
+          name="viewport"
+        ></meta>
         <title>01.04.2023</title>
+        <meta
+          name="description"
+          content="La gran escapada, la festa on l'Andrea i en Juli faran el gran pas! Us esperem a Ca n'Alzina - Espai Gastronomia (Rubió)!"
+        ></meta>
+        <link rel="canonical" href="https://www.lagranescapada.cat"></link>
+        <meta name="robots" content="Index,Follow"></meta>
+        <meta property="og:image" content="/share.jpg"></meta>
       </Head>
       <div className="home h-screen flex flex-col relative overflow-hidden">
         <div className="fixed top-0 left-0 w-full h-full z-0 opacity-40">

@@ -19,11 +19,9 @@ const PersonalToast = () => {
         </div>
         <p className="text-sm font-fonseca text-primary-400">
           Hola
-          <span className=" text-primary-500 underline hidden">
-            David i Judtih
-          </span>
-          , tot i que aviat rebreu les invitacions per a la nostra gran festa,
-          només ens voliem assegurar que us reserveu el dia{" "}
+          <span className=" text-primary-500 underline hidden"></span>, tot i
+          que aviat rebreu les invitacions per a la nostra gran festa
+          pròximament, només ens voliem assegurar que us reserveu el dia{" "}
           <a
             href="https://calendar.google.com/event?action=TEMPLATE&tmeid=Nmczamc1cTZmdGJvb2hvcGUyMDAydW1qa2QganVsaWRlcmFtb25AbQ&tmsrc=julideramon%40gmail.com"
             title="Afegir l'esdeveniment al calendari"

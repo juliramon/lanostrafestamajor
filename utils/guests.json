@@ -1,0 +1,45 @@
+{
+  "ref": "guests",
+  "data": [
+    {
+      "id": "0",
+      "name": "Andrea i Juli"
+    },
+    {
+      "id": "1",
+      "name": "Sandra"
+    },
+    {
+      "id": "2",
+      "name": "Montserrat i Joan"
+    },
+    {
+      "id": "3",
+      "name": "Pepita"
+    },
+    {
+      "id": "4",
+      "name": "Montse i Lalo"
+    },
+    {
+      "id": "5",
+      "name": "Paula"
+    },
+    {
+      "id": "6",
+      "name": "Eudald"
+    },
+    {
+      "id": "7",
+      "name": "Mireia"
+    },
+    {
+      "id": "8",
+      "name": "Anna i Ricardo"
+    },
+    {
+      "id": "9",
+      "name": "Paqui"
+    }
+  ]
+}

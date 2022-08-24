@@ -12,6 +12,10 @@ const Home = () => {
           content="width=device-width, initial-scale=1.0, minimum-scale=1"
           name="viewport"
         ></meta>
+        <meta name="theme-color" content="#ffffff"></meta>
+        <link rel="mask-icon" href="favicon.svg" color="#ffffff"></link>
+        <link rel="icon" href="favicon.svg"></link>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></link>
         <title>01.04.2023</title>
         <meta
           name="description"

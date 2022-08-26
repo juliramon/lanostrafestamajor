@@ -28,7 +28,7 @@ const PersonalToast = () => {
           >
             01.04.2023
           </a>{" "}
-          al calendari. Aneu-vos preparant! 🎉
+          al calendari. Aneu-vos preparant!
         </p>
       </div>
     </div>

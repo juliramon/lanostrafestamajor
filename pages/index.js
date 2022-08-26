@@ -136,7 +136,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-01.svg"
-                          className="w-9 h-9 opacity-80 leaf leaf-01"
+                          className="w-9 h-9 opacity-40 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>
@@ -144,7 +144,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-02.svg"
-                          className="w-7 h-7 opacity-40 leaf leaf-01"
+                          className="w-7 h-7 opacity-25 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>
@@ -152,7 +152,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-02.svg"
-                          className="w-7 h-7 opacity-60 leaf leaf-01"
+                          className="w-7 h-7 opacity-40 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>
@@ -160,7 +160,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-03.svg"
-                          className="w-8 h-8 opacity-20 leaf leaf-01"
+                          className="w-8 h-8 opacity-10 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>
@@ -170,7 +170,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-02.svg"
-                          className="w-9 h-9 opacity-80 leaf leaf-01"
+                          className="w-9 h-9 opacity-40 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>
@@ -178,7 +178,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-01.svg"
-                          className="w-7 h-7 opacity-40 leaf leaf-01"
+                          className="w-7 h-7 opacity-25 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>
@@ -186,7 +186,7 @@ const Home = () => {
                       <picture>
                         <img
                           src="/leaf-01.svg"
-                          className="w-7 h-7 opacity-60 leaf leaf-01"
+                          className="w-7 h-7 opacity-40 leaf leaf-01"
                         ></img>
                       </picture>
                     </div>

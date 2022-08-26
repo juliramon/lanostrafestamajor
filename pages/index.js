@@ -25,7 +25,7 @@ const Home = () => {
         <meta name="robots" content="Index,Follow"></meta>
         <meta property="og:image" content="/share.jpg"></meta>
       </Head>
-      <div className="home h-screen flex flex-col relative overflow-hidden">
+      <div className="home h-full md:h-screen flex flex-col relative overflow-hidden">
         <div className="fixed top-0 left-0 w-full h-full z-0 opacity-20">
           <picture>
             <img

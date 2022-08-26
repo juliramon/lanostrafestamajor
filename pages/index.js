@@ -26,7 +26,7 @@ const Home = () => {
         <meta property="og:image" content="/share.jpg"></meta>
       </Head>
       <div className="home h-screen flex flex-col relative overflow-hidden">
-        <div className="fixed top-0 left-0 w-full h-full z-0 opacity-40">
+        <div className="fixed top-0 left-0 w-full h-full z-0 opacity-20">
           <picture>
             <img
               src="./white-paper-texture.jpg"
@@ -42,7 +42,7 @@ const Home = () => {
           <div className="container">
             <div className="max-w-md mx-auto flex flex-col items-center justify-center">
               <section className="flex flex-col justify-center pt-12 md:pt-28">
-                <div className="mb-5 w-32 h-auto mx-auto">
+                <div className="mb-5 w-32 h-auto mx-auto relative">
                   <svg
                     viewBox="0 0 87 119"
                     version="1.1"
@@ -131,6 +131,74 @@ const Home = () => {
                       </g>
                     </g>
                   </svg>
+                  <div className="leafs-wrapper left">
+                    <div className="absolute -top-12 -left-32">
+                      <picture>
+                        <img
+                          src="/leaf-01.svg"
+                          className="w-9 h-9 opacity-80 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                    <div className="absolute top-0 -left-9">
+                      <picture>
+                        <img
+                          src="/leaf-02.svg"
+                          className="w-7 h-7 opacity-40 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                    <div className="absolute bottom-5 -left-16  rotate-45">
+                      <picture>
+                        <img
+                          src="/leaf-02.svg"
+                          className="w-7 h-7 opacity-60 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                    <div className="absolute bottom-20 -left-32  rotate-45">
+                      <picture>
+                        <img
+                          src="/leaf-03.svg"
+                          className="w-8 h-8 opacity-20 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                  </div>
+                  <div className="leafs-wrapper right">
+                    <div className="absolute -top-12 -right-32">
+                      <picture>
+                        <img
+                          src="/leaf-02.svg"
+                          className="w-9 h-9 opacity-80 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                    <div className="absolute top-0 -right-9">
+                      <picture>
+                        <img
+                          src="/leaf-01.svg"
+                          className="w-7 h-7 opacity-40 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                    <div className="absolute bottom-5 -right-16 rotate-90">
+                      <picture>
+                        <img
+                          src="/leaf-01.svg"
+                          className="w-7 h-7 opacity-60 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                    <div className="absolute bottom-20 -right-32  rotate-45">
+                      <picture>
+                        <img
+                          src="/leaf-03.svg"
+                          className="w-8 h-8 opacity-20 leaf leaf-01"
+                        ></img>
+                      </picture>
+                    </div>
+                  </div>
                 </div>
                 <h1 className="uppercase text-primary-500 text-4xl lg:text-6xl mt-0 mb-5 text-center">
                   Andrea & Juli

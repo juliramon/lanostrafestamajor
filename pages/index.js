@@ -1,8 +1,15 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import Footer from "../components/global/Footer";
 import PersonalToast from "../components/toasts/PersonalToast";
 
 const Home = () => {
+  useEffect(() => {
+    const pageAudio = new Audio("./doctor_prats_massa_be.mp3");
+    document.body.addEventListener("mousemove", () => pageAudio.play());
+    document.body.addEventListener("scroll", () => pageAudio.play());
+    document.body.addEventListener("touchstart", () => pageAudio.play());
+  });
   return (
     <>
       <Head>

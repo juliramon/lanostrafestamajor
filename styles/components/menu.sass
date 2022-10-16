@@ -1,24 +1,59 @@
 @layer components
-    nav
+    .nav
         @apply bg-transparent transition-all duration-300 ease-in-out
 
-    nav a, nav button
+    .nav a, .nav .nav__menu-button
         @apply text-white bg-transparent
 
-    nav .button
+    .nav .nav__button
         @apply border border-white bg-transparent transition-all duration-300 ease-in-out
 
-    nav .button:hover
+    .nav .nav__button:hover
         @apply bg-white text-primary-500
+
+    .nav .nav__dropdown
+        @apply -translate-x-full transition-all duration-300 ease-in-out 
+
+    .nav .nav__menu-button-icon
+        @apply relative
+
+        .line_1, .line_2
+            @apply absolute bg-white transition-all duration-300 ease-in-out
+            
+        .line_1
+            @apply top-1/4
+
+        .line_2
+            @apply top-3/4
+        
+       
+    .nav--open .nav__dropdown
+        @apply translate-x-0
+
+    .nav--open .nav__menu-button-icon
+        .line_1
+            @apply -rotate-45 top-1/2
+            transform-origin: center
+
+        .line_2
+            @apply rotate-45 top-1/2
+            transform-origin: center
 
     .nav--scrolled
         @apply bg-white
 
-    .nav--scrolled a, .nav--scrolled button
-        @apply text-black
+    .nav--scrolled .nav__dropdown a
+        @apply text-white
 
-    .nav--scrolled .button
-        @apply border-black 
+    .nav--scrolled a, .nav--scrolled .nav__menu-button
+        @apply text-primary-500
 
-    .nav--scrolled .button:hover
+    .nav--scrolled .nav__button
+        @apply border-primary-500 
+
+    .nav--scrolled .nav__button:hover
         @apply bg-primary-500 text-white border-primary-500
+
+    .nav--scrolled .nav__menu-button-icon
+        .line_1, .line_2
+            @apply bg-primary-500

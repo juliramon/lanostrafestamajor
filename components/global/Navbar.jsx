@@ -1,45 +1,108 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+	const [openMenu, setOpenMenu] = useState(false);
+
+	const [offSet, setOffset] = useState(0);
+
+	useEffect(() => {
+		const onScroll = () => setOffset(window.pageYOffset);
+		window.removeEventListener("scroll", onScroll);
+		window.addEventListener("scroll", onScroll, { passive: true });
+
+		if (offSet > 99) {
+			const nav = document.querySelector("nav");
+			nav.classList.add("nav--scrolled");
+		} else {
+			const nav = document.querySelector("nav");
+			nav.classList.remove("nav--scrolled");
+		}
+
+		return () => window.removeEventListener("scroll", onScroll);
+	});
+
 	return (
-		<nav className="flex flex-wrap items-center justify-between w-full py-4 fixed top-0 z-50 px-6">
-			<div className="w-full md:w-1/3">
+		<nav
+			className={`nav flex flex-wrap items-center justify-between w-full py-4 fixed top-0 z-50 px-6 ${
+				openMenu ? "nav--open" : ""
+			}`}
+		>
+			<div className="w-full md:w-1/3 relative">
 				<button
 					type="button"
-					className="uppercase text-sm inline-flex items-center tracking-widest"
+					className="uppercase text-sm inline-flex items-center tracking-widest nav__menu-button"
+					onClick={() => setOpenMenu(!openMenu)}
 				>
-					<svg
-						className="w-5 h-5 mr-2.5"
-						width="28px"
-						height="28px"
-						viewBox="0 0 38 38"
-						version="1.1"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-							<g id="Desktop-HD" transform="translate(-65.000000, -39.000000)">
-								<g id="menu-icon" transform="translate(65.000000, 39.000000)">
-									<rect
-										fillOpacity="0"
-										fill="#D8D8D8"
-										x="0"
-										y="0"
-										width="38"
-										height="38"
-									></rect>
-									<g
-										transform="translate(3.000000, 11.000000)"
-										fill="currentColor"
-									>
-										<rect x="0" y="0" width="33" height="3"></rect>
-										<rect x="0" y="13" width="33" height="3"></rect>
-									</g>
-								</g>
-							</g>
-						</g>
-					</svg>
+					<div className="w-5 h-5 mr-2.5 flex flex-wrap items-center justify-center nav__menu-button-icon">
+						<span className="w-full h-px block line_1"></span>
+						<span className="w-full h-px block line_2"></span>
+					</div>
 					Menu
 				</button>
+				<div className="absolute top-14 -left-6 bg-primary-500 py-2.5 px-2 min-w-[300px] nav__dropdown">
+					<ul>
+						<li>
+							<a
+								href="#introduccio"
+								title="Introducció"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								Introducció
+							</a>
+						</li>
+						<li>
+							<a
+								href="#localitzacio"
+								title="Localització"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								Localització
+							</a>
+						</li>
+						<li>
+							<a
+								href="#agenda"
+								title="Horari i agenda"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								Horari i agenda
+							</a>
+						</li>
+						<li>
+							<a
+								href="#nuvis"
+								title="Els nuvis"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								Els nuvis
+							</a>
+						</li>
+						<li>
+							<a
+								href="#faqs"
+								title="Preguntes freqüents"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								Preguntes freqüents
+							</a>
+						</li>
+						<li>
+							<a
+								href="#contacte"
+								title="Contacte"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								Contacte
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div className="w-full md:w-1/3 text-center flex justify-center">
 				<a
@@ -51,7 +114,11 @@ const Navbar = () => {
 				</a>
 			</div>
 			<div className="w-full md:w-1/3 flex justify-end">
-				<a href="#" title="Confirmar assistència" className="button">
+				<a
+					href="#"
+					title="Confirmar assistència"
+					className="button nav__button"
+				>
 					Confirmar assistència
 				</a>
 			</div>

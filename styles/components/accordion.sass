@@ -1,0 +1,18 @@
+@layer components
+    .accordion__title
+        @apply bg-white px-5 py-2.5 mb-4 shadow-sm font-tenez text-lg flex items-center justify-between cursor-pointer
+
+    .accordion__title .accordion__icon
+        .line_1, .line_2
+            @apply transition-all duration-300 ease-in-out
+
+    .accordion__title.open
+        .accordion__icon
+            .line_2
+                @apply rotate-0
+            .line_1
+                @apply opacity-0
+
+    .accordon__content
+        @apply min-h-0
+        

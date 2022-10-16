@@ -1,0 +1,24 @@
+@layer components
+    nav
+        @apply bg-transparent transition-all duration-300 ease-in-out
+
+    nav a, nav button
+        @apply text-white bg-transparent
+
+    nav .button
+        @apply border border-white bg-transparent transition-all duration-300 ease-in-out
+
+    nav .button:hover
+        @apply bg-white text-primary-500
+
+    .nav--scrolled
+        @apply bg-white
+
+    .nav--scrolled a, .nav--scrolled button
+        @apply text-black
+
+    .nav--scrolled .button
+        @apply border-black 
+
+    .nav--scrolled .button:hover
+        @apply bg-primary-500 text-white border-primary-500

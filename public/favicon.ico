@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>favicon</title>
-    <g id="favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="AppleColorEmoji, Apple Color Emoji" font-size="145" font-weight="normal">
+    <g id="favicon" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" font-family="AppleColorEmoji, Apple Color Emoji" font-size="145" font-weight="normal">
         <text id="🎉" fill="#2F6FAF">
             <tspan x="17" y="146">🎉</tspan>
         </text>

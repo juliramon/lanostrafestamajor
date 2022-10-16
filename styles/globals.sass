@@ -1,4 +1,12 @@
+
+// Pages
 @import "pages/home"
+
+// Components
+@import "components/buttons"
+@import "components/menu"
+
+// Vendors
 @import "vendors/tailwind"
 
 @font-face 
@@ -16,3 +24,35 @@
 	font-weight: 200
 	font-style: normal
 	font-display: swap
+
+@layer base
+
+	body
+		@apply font-fonseca
+
+	h1, h2, h3, h4, h5, h6
+		@apply font-tenez
+
+	h1
+		font-size: clamp(40px, 4vw, 110px)
+		@apply leading-normal my-0
+		@screen lg
+			@apply leading-none
+
+	h2
+		font-size: clamp(24px, 4vw, 40px)
+		@apply leading-normal my-0 text-primary-500
+		@screen lg
+			@apply leading-none
+
+	h3
+		font-size: clamp(18px, 4vw, 24px)
+		@apply leading-normal my-0 text-primary-500 uppercase
+		@screen lg
+			@apply leading-none
+
+	h4
+		font-size: clamp(16px, 4vw, 18px)
+		@apply leading-normal my-0 text-primary-500 uppercase
+		@screen lg
+			@apply leading-none

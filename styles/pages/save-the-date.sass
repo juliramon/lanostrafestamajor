@@ -1,0 +1,42 @@
+#svgWrapper
+	path
+		fill: #2F6FAF
+
+#personalToastWrapper
+	@apply relative -bottom-full left-1/2 -translate-x-1/2 transition-all duration-700 ease-in-out p-6 w-full sm:max-w-lg
+	&.active
+		@apply bottom-0
+
+#toastBlop
+	box-shadow: 0 0 0 0 rgba(255, 82, 82, 1)
+	animation: pulse-red 2s infinite
+	border-radius: 3px
+
+@keyframes pulse-red
+	0%
+		transform: scale(0.95)
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7)
+  
+	70%
+		transform: scale(1)
+		box-shadow: 0 0 0 10px rgba(255, 82, 82, 0)
+
+	100%
+		transform: scale(0.95)
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0)
+
+.leaf
+	animation: leaf-animation 10s infinite
+	animation-timing-function: ease-in-out
+
+@keyframes leaf-animation
+	0%
+		transform: translateY(0)
+	25%
+		transform: translate(5px,5px)
+	50%
+		transform: translate(10px,10px)
+	75%
+		transform: translate(5px,5px)
+	100%
+		transform: translate(0)

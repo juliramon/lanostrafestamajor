@@ -3,6 +3,8 @@ import Navbar from "../components/global/Navbar";
 import Footer from "../components/global/Footer";
 import Accordion from "../components/accordions/Accordion";
 import Agenda from "../components/others/Agenda";
+import Counter from "../components/others/Counter";
+import { useState } from "react";
 
 const Home = () => {
 	const faqs = [
@@ -58,6 +60,8 @@ const Home = () => {
 			description: "23:30 h - Veurem sortir el sol?",
 		},
 	];
+
+	const [stateDeadline, setStateDeadline] = useState("April 01, 2023");
 
 	return (
 		<>
@@ -149,7 +153,7 @@ const Home = () => {
 								<img
 									src="white-paper-texture.jpg"
 									alt=""
-									className="w-full h-full object-cover opacity-20"
+									className="w-full h-full object-cover opacity-40"
 									loading="lazy"
 								/>
 							</picture>
@@ -367,30 +371,7 @@ const Home = () => {
 									/>
 								</picture>
 							</div>
-							<div className="flex items-center justify-center relative z-20">
-								<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center">
-									187
-									<span className="uppercase block text-sm">dies</span>
-								</div>
-								<span className="text-2xl text-secondary-100 opacity-80">
-									:
-								</span>
-								<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center">
-									5<span className="uppercase block text-sm">hrs</span>
-								</div>
-								<span className="text-2xl text-secondary-100 opacity-80">
-									:
-								</span>
-								<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center">
-									8<span className="uppercase block text-sm">min</span>
-								</div>
-								<span className="text-2xl text-secondary-100 opacity-80">
-									:
-								</span>
-								<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center">
-									23<span className="uppercase block text-sm">seg</span>
-								</div>
-							</div>
+							<Counter deadline={stateDeadline} />
 						</div>
 					</div>
 				</section>

@@ -84,11 +84,13 @@ const Home = () => {
 				<meta name="robots" content="Index,Follow"></meta>
 				<meta property="og:image" content="/share.jpg"></meta>
 			</Head>
+
 			{/* Navigation bar */}
 			<Navbar />
+
 			<div className="main">
 				{/* Section cover */}
-				<section className="w-full h-screen relative">
+				<section className="w-full h-screen relative z-10">
 					<div className="relative w-full h-full after:absolute after:inset-0 after:bg-gradient-to-b after:from-black after:to-transparent after:opacity-50">
 						<picture>
 							<img
@@ -118,9 +120,9 @@ const Home = () => {
 				</section>
 
 				{/* Section intro  */}
-				<section className="flex flex-wrap items-stretch overflow-hidden relative">
+				<section className="flex flex-wrap items-stretch relative z-30">
 					<span id="introduccio" className="absolute -top-20"></span>
-					<div className="w-full lg:w-8/12 relative lg:pt-56 lg:pb-32 flex flex-wrap items-center justify-center">
+					<div className="w-full lg:w-8/12 relative lg:pt-48 lg:pb-32 flex flex-wrap items-center justify-center">
 						<div className="relative z-10 max-w-lg mx-auto">
 							<h2>
 								Després de 9 anys i moltes escapades junts, hem dicidit que és
@@ -159,12 +161,20 @@ const Home = () => {
 							</picture>
 						</div>
 					</div>
-					<div className="w-full lg:w-4/12 relative">
+					<div className="w-full lg:w-4/12 relative z-30">
+						<iv className="absolute -left-12 -top-5 z-10">
+							<picture>
+								<img
+									src="img/home/andrea-juli-frame.png"
+									className="w-56 h-auto rotate-6 shadow-xl"
+								/>
+							</picture>
+						</iv>
 						<picture>
 							<img
 								src="img/home/flors-right.png"
 								alt=""
-								className="w-full h-full object-cover absolute top-0 right-9"
+								className="w-full h-full object-cover absolute"
 								loading="lazy"
 							/>
 						</picture>
@@ -172,7 +182,7 @@ const Home = () => {
 				</section>
 
 				{/* Section location */}
-				<section className="relative p-14 flex justify-end">
+				<section className="relative py-44 px-14 flex justify-end">
 					<span id="localitzacio" className="absolute -top-20"></span>
 					<div className="absolute inset-0 z-0">
 						<iframe
@@ -337,54 +347,73 @@ const Home = () => {
 					</div>
 				</section>
 
-				{/* Section countdown */}
-				<section className="relative z-20 -mt-28">
-					<div className="container">
-						<div className="w-full lg:w-8/12 lg:mx-auto px-10 py-20 relative overflow-hidden">
-							<div className="absolute inset-0 z-0">
-								<picture>
-									<img
-										src="white-paper-texture.jpg"
-										alt=""
-										className="w-full h-full object-cover"
-										loading="lazy"
-									/>
-								</picture>
+				{/* Section nuvis */}
+				<section className="relative">
+					{/* Panel countdown */}
+					<div className="absolute z-30 top-0 -translate-y-1/2 w-9/12 left-1/2 -translate-x-1/2">
+						<div className="container">
+							<div className="w-full lg:w-8/12 lg:mx-auto px-10 py-20 relative overflow-hidden shadow-lg">
+								<div className="absolute inset-0 z-0">
+									<picture>
+										<img
+											src="white-paper-texture.jpg"
+											alt=""
+											className="w-full h-full object-cover"
+											loading="lazy"
+										/>
+									</picture>
+								</div>
+								<div className="absolute top-0 left-0 opacity-20 h-full z-10">
+									<picture>
+										<img
+											src="img/home/flors-countdown.png"
+											alt=""
+											className="w-auto h-full object-contain"
+											loading="lazy"
+										/>
+									</picture>
+								</div>
+								<div className="absolute top-0 right-0 opacity-20 h-full z-10">
+									<picture>
+										<img
+											src="img/home/flors-countdown-right.png"
+											alt=""
+											className="w-auto h-full object-contain"
+											loading="lazy"
+										/>
+									</picture>
+								</div>
+								<Counter deadline={stateDeadline} />
 							</div>
-							<div className="absolute top-0 left-0 opacity-20 h-full z-10">
-								<picture>
-									<img
-										src="img/home/flors-countdown.png"
-										alt=""
-										className="w-auto h-full object-contain"
-										loading="lazy"
-									/>
-								</picture>
-							</div>
-							<div className="absolute top-0 right-0 opacity-40 h-full z-10">
-								<picture>
-									<img
-										src="img/home/flors-countdown-right.png"
-										alt=""
-										className="w-auto h-full object-contain"
-										loading="lazy"
-									/>
-								</picture>
-							</div>
-							<Counter deadline={stateDeadline} />
 						</div>
 					</div>
-				</section>
 
-				{/* Section nuvis */}
-				<section className="relative lg:pt-40 lg:pb-32">
 					<span id="nuvis" className="absolute -top-20"></span>
-					<div className="container">
-						<h2 className="text-center max-w-xl mx-auto">
-							Els nuvis.
-							<br /> Una breu introducció a tot el que ens ha portat fins a
-							aquest punt.
-						</h2>
+
+					<div className="relative lg:pt-64 lg:pb-32 overflow-hidden z-20">
+						<div className="container relative z-20">
+							<h2 className="text-center max-w-xl mx-auto">
+								Els nuvis.
+								<br /> Una breu introducció a tot el que ens ha portat fins a
+								aquest punt.
+							</h2>
+						</div>
+						<picture>
+							<img
+								src="img/home/flors-right.png"
+								alt=""
+								className="object-cover absolute left-0 top-0 w-1/2"
+								loading="lazy"
+							/>
+						</picture>
+						<picture>
+							<img
+								src="img/home/flors-right.png"
+								alt=""
+								className="object-cover absolute right-0 top-0 w-1/2"
+								loading="lazy"
+							/>
+						</picture>
 					</div>
 				</section>
 

@@ -10,11 +10,13 @@ const Home = () => {
 	const faqs = [
 		{
 			title: "Hem de seguir algun codi de vestimenta?",
-			description: "",
+			description:
+				"El codi de vestimenta del casament és entre còctel i formal, la qüestió és que vingueu ben elegants!",
 		},
 		{
 			title: "Heu fet llista de casament, o heu obert un compte?",
-			description: "",
+			description:
+				"La vostra presència serà el millor regal, però si tot i així voleu fer-nos un obsequi, agraïrem molt la vostra aportació al número de compte que hem habilitat: ES28 2100 3973 9202 0041 7262 per ajudar-nos a fer del viatge de noces un moment per recordar.",
 		},
 		{
 			title: "Hi ha allotjaments a la vora on poder passar la nit?",
@@ -22,19 +24,23 @@ const Home = () => {
 		},
 		{
 			title: "Com es diu l'espai on es celebrarà el casament?",
-			description: "",
+			description:
+				"L'espai on es celebrarà tant la cerimònia com el convit és Ca n'Alzina - Espai Gastronomia, i es troba situat a les afores del petit poble de Rubió (Igualada). És important no confondre el nom de l'espai amb el del poble de Ca n'Alzina; el correcte és el primer.",
 		},
 		{
 			title: "Hem de confirmar assistència? Com podem fer-ho?",
-			description: "",
+			description:
+				"Ens facilitareu l'organització del casament si ens confirmeu la vostra assistència. Podeu fer-ho tant al moment de l'entrega de les invitacions, per telèfon o a través del formulari que hem habilitat.",
 		},
 		{
 			title: "Sóc vegà/vegetarià i/o tinc al·lèrgies alimentàries. Què faig?",
-			description: "",
+			description:
+				"Si tens al·lergies alimentàries o tens certes restriccions alimentàries, ens ho pots fer saber a través del formulari de confirmació d'assistència.",
 		},
 		{
 			title: "Si tenim més dubtes, com us podem contactar?",
-			description: "",
+			description:
+				"Podeu contactar amb nosaltres per telèfon o per correu electrònic a lagranescapada2023@gmail.com",
 		},
 	];
 
@@ -466,6 +472,51 @@ const Home = () => {
 								loading="lazy"
 							/>
 						</picture>
+					</div>
+				</section>
+
+				{/* Section contacte */}
+				<section className="relative">
+					<div className="container">
+						<div className="w-full lg:w-7/12 lg:mx-auto">
+							<div className="-mx-6 flex flex-wrap items-center">
+								<div className="px-6 w-full lg:w-1/2">
+									<h2>Seguiu tenint dubtes? Contacteu-nos.</h2>
+									<p className="mt-6 text-primary-400">
+										Si en aquest punt seguiu teniu dubtes o preguntes que no us
+										hem resolt, no dubteu en contactar-nos pels canals que
+										trobareu a continuació. Estarem més que encantats
+										d'ajudar-vos.
+									</p>
+								</div>
+								<ul className="list-none m-0 px-6 w-full lg:w-1/2">
+									<li>
+										<h3 className="text-3xl">
+											<a href="" title="+34 626 138 170">
+												Whatsapp
+											</a>
+										</h3>
+									</li>
+									<li>
+										<h3 className="text-3xl">
+											<a href="tel:+34626138170" title="+34 626 138 170">
+												Telèfon
+											</a>
+										</h3>
+									</li>
+									<li>
+										<h3 className="normal-case text-3xl">
+											<a
+												href="mailto:lagranescapada@gmail.com"
+												title="Correu electrònic"
+											>
+												Correu electrònic
+											</a>
+										</h3>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>

@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ navScrolled }) => {
 	const [openMenu, setOpenMenu] = useState(false);
-
 	const [offSet, setOffset] = useState(0);
+
+	const router = useRouter();
 
 	useEffect(() => {
 		const onScroll = () => setOffset(window.pageYOffset);
 		window.removeEventListener("scroll", onScroll);
 		window.addEventListener("scroll", onScroll, { passive: true });
 
-		if (offSet > 99) {
+		if (offSet > 99 || navScrolled) {
 			const nav = document.querySelector("nav");
 			nav.classList.add("nav--scrolled");
 		} else {
@@ -114,13 +116,23 @@ const Navbar = () => {
 				</a>
 			</div>
 			<div className="w-full md:w-1/3 flex justify-end">
-				<a
-					href="#"
-					title="Confirmar assistència"
-					className="button nav__button"
-				>
-					Confirmar assistència
-				</a>
+				{router.pathname == "confirmar-assistencia" ? (
+					<a
+						href="#"
+						title="Confirmar assistència"
+						className="button nav__button"
+					>
+						Confirmar assistència
+					</a>
+				) : (
+					<a
+						href="tel:+34626138170"
+						title="Necessites ajuda?"
+						className="button nav__button"
+					>
+						Necessites ajuda?
+					</a>
+				)}
 			</div>
 		</nav>
 	);

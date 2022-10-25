@@ -94,7 +94,7 @@ const Home = () => {
 			{/* Navigation bar */}
 			<Navbar />
 
-			<div className="main">
+			<main>
 				{/* Section cover */}
 				<section className="w-full h-screen relative z-10">
 					<div className="relative w-full h-full after:absolute after:inset-0 after:bg-gradient-to-b after:from-black after:to-transparent after:opacity-50">
@@ -476,40 +476,116 @@ const Home = () => {
 				</section>
 
 				{/* Section contacte */}
-				<section className="relative">
-					<div className="container">
-						<div className="w-full lg:w-7/12 lg:mx-auto">
-							<div className="-mx-6 flex flex-wrap items-center">
-								<div className="px-6 w-full lg:w-1/2">
-									<h2>Seguiu tenint dubtes? Contacteu-nos.</h2>
-									<p className="mt-6 text-primary-400">
+				<section className="relative bg-primary-500 text-zinc-200 py-12 lg:py-24">
+					<div className="container relative z-20">
+						<div className="w-full lg:w-8/12 lg:mx-auto">
+							<div className="-mx-6 flex flex-wrap items-center justify-between">
+								<div className="px-6 w-full lg:w-2/3 max-w-lg">
+									<h2 className="text-zinc-200">
+										Seguiu tenint dubtes? Contacteu-nos.
+									</h2>
+									<p className="mt-6 text-zinc-300">
 										Si en aquest punt seguiu teniu dubtes o preguntes que no us
 										hem resolt, no dubteu en contactar-nos pels canals que
 										trobareu a continuació. Estarem més que encantats
 										d'ajudar-vos.
 									</p>
 								</div>
-								<ul className="list-none m-0 px-6 w-full lg:w-1/2">
-									<li>
-										<h3 className="text-3xl">
-											<a href="" title="+34 626 138 170">
+								<ul className="list-none m-0 px-6 w-full lg:w-1/3">
+									<li className="mb-2.5">
+										<h3 className="normal-case text-3xl text-zinc-200">
+											<a
+												href="tel:+34626138170"
+												title="Contacta'ns per Whatsapp"
+												className="flex items-center"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													className="mr-2"
+													width={28}
+													height={28}
+													viewBox="0 0 24 24"
+													strokeWidth="1.5"
+													stroke="currentColor"
+													fill="none"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												>
+													<path
+														stroke="none"
+														d="M0 0h24v24H0z"
+														fill="none"
+													></path>
+													<path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+													<path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1"></path>
+												</svg>
 												Whatsapp
 											</a>
 										</h3>
 									</li>
-									<li>
-										<h3 className="text-3xl">
-											<a href="tel:+34626138170" title="+34 626 138 170">
+									<li className="mb-2.5">
+										<h3 className="normal-case text-3xl text-zinc-50">
+											<a
+												href="tel:+34626138170"
+												title="Contacta'ns per telèfon"
+												className="flex items-center"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													className="mr-2"
+													width={28}
+													height={28}
+													viewBox="0 0 24 24"
+													strokeWidth="1.5"
+													stroke="currentColor"
+													fill="none"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												>
+													<path
+														stroke="none"
+														d="M0 0h24v24H0z"
+														fill="none"
+													></path>
+													<path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+												</svg>
 												Telèfon
 											</a>
 										</h3>
 									</li>
 									<li>
-										<h3 className="normal-case text-3xl">
+										<h3 className="normal-case text-3xl text-zinc-50">
 											<a
 												href="mailto:lagranescapada@gmail.com"
-												title="Correu electrònic"
+												title="Contacta'ns per correu electrònic"
+												className="flex items-center relative"
 											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													className="mr-2"
+													width={28}
+													height={28}
+													viewBox="0 0 24 24"
+													strokeWidth="1.5"
+													stroke="currentColor"
+													fill="none"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												>
+													<path
+														stroke="none"
+														d="M0 0h24v24H0z"
+														fill="none"
+													></path>
+													<rect
+														x={3}
+														y={5}
+														width={18}
+														height={14}
+														rx={2}
+													></rect>
+													<polyline points="3 7 12 13 21 7"></polyline>
+												</svg>
 												Correu electrònic
 											</a>
 										</h3>
@@ -518,8 +594,18 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
+					<div className="absolute inset-0 z-0 before:absolute before:inset-0 before:bg-opacity-90 before:w-full before:h-full before:bg-black opacity-40">
+						<picture>
+							<img
+								src="white-paper-texture.jpg"
+								alt=""
+								className="w-full h-full object-cover opacity-20 mix-blend-darken"
+								loading="lazy"
+							/>
+						</picture>
+					</div>
 				</section>
-			</div>
+			</main>
 		</>
 	);
 };

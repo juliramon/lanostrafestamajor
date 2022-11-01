@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const PlaylistToast = () => {
 	const [toast, setToast] = useState(false);
-	setTimeout(() => setToast(true), 3000);
+	useEffect(() => {
+		setTimeout(() => setToast(true), 3000);
+	}, []);
 	return (
 		<div className={`toast-playlist ${toast ? "show" : ""}`}>
 			<div className="w-16 h-16 rounded overflow-hidden mt-0.5">
@@ -46,6 +48,27 @@ const PlaylistToast = () => {
 					Escolta-la
 				</a>
 			</div>
+			<button
+				className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2  rounded-full p-0.5 bg-white shadow-lg"
+				onClick={() => setToast(false)}
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					className="text-black"
+					width={16}
+					height={16}
+					viewBox="0 0 24 24"
+					strokeWidth="2"
+					stroke="currentColor"
+					fill="none"
+					strokeLinecap="round"
+					strokeLinejoin="round"
+				>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+					<line x1={18} y1={6} x2={6} y2={18}></line>
+					<line x1={6} y1={6} x2={18} y2={18}></line>
+				</svg>
+			</button>
 		</div>
 	);
 };

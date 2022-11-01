@@ -5,6 +5,7 @@ import Accordion from "../components/accordions/Accordion";
 import Agenda from "../components/others/Agenda";
 import Counter from "../components/others/Counter";
 import { useState } from "react";
+import PlaylistToast from "../components/toasts/PlaylistToast";
 
 const Home = () => {
 	const faqs = [
@@ -606,6 +607,8 @@ const Home = () => {
 					</div>
 				</section>
 			</main>
+
+			<PlaylistToast />
 		</>
 	);
 };

@@ -404,6 +404,104 @@ const Home = () => {
 								<br /> Una breu introducció a tot el que ens ha portat fins a
 								aquest punt.
 							</h2>
+							<div className="mt-14">
+								<div className="flex flex-wrap justify-center">
+									<div className="px-14 rotate-3">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-nuvia.png"
+												alt=""
+												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-3 text-center">
+											<h3 className="text-lg text-center text-black">
+												Andrea Prat, la núvia
+											</h3>
+											<span className="text-sm text-gray-500">Molt fan de</span>
+										</div>
+									</div>
+									<div className="px-14 -rotate-6">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-nuvi.png"
+												alt=""
+												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-3 text-center">
+											<h3 className="text-lg text-center text-black">
+												Juli Ramon, el nuvi
+											</h3>
+											<span className="text-sm text-gray-500">Molt fan de</span>
+										</div>
+									</div>
+								</div>
+								<div className="flex flex-wrap justify-center mt-16">
+									<div className="px-14 -rotate-2 flex flex-col justify-center">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-01.png"
+												alt=""
+												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-5 text-center">
+											<span className="text-sm text-gray-500">
+												22 de maig, 2013
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Ens coneixem a <u>sala Bikini</u> en una nit que cap
+												dels dos oblidarà
+											</span>
+										</div>
+									</div>
+								</div>
+								<div className="flex flex-wrap justify-center mt-16">
+									<div className="px-14 rotate-6 flex flex-col justify-center relative -left-44">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-02.png"
+												alt=""
+												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-5 text-center">
+											<span className="text-sm text-gray-500">
+												26 d'octubre, 2013
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Comencem a sortir junts
+											</span>
+										</div>
+									</div>
+								</div>
+								<div className="flex flex-wrap justify-center mt-6">
+									<div className="px-14 -rotate-6 flex flex-col justify-center relative -right-44">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-01.png"
+												alt=""
+												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-5 text-center">
+											<span className="text-sm text-gray-500">
+												22 de maig, 2013
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Ens coneixem a <u>sala Bikini</u> en una nit que cap
+												dels dos oblidarà
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<picture>
 							<img

@@ -29,7 +29,7 @@ const Navbar = ({ navScrolled }) => {
 				openMenu ? "nav--open" : ""
 			}`}
 		>
-			<div className="w-full md:w-1/3 relative">
+			<div className="w-full md:w-1/3 relative flex items-center">
 				<button
 					type="button"
 					className="uppercase text-sm inline-flex items-center tracking-widest nav__menu-button"
@@ -41,7 +41,7 @@ const Navbar = ({ navScrolled }) => {
 					</div>
 					Menu
 				</button>
-				<div className="absolute top-14 -left-6 bg-primary-500 py-2.5 px-2 min-w-[300px] nav__dropdown">
+				<div className="absolute top-[52px] -left-6 bg-primary-500 py-2.5 px-2 min-w-[300px] nav__dropdown">
 					<ul>
 						<li>
 							<a

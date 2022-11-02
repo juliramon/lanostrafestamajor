@@ -19,14 +19,14 @@ const PlaylistToast = () => {
 					/>
 				</picture>
 			</div>
-			<div className="ml-5 text-white">
+			<div className="ml-4 text-white">
 				<span className="block tracking-wider font-tenez uppercase">
 					La playlist del casament
 				</span>
 				<a
 					href="https://open.spotify.com/playlist/1NeOOivWhbywFUE00OWHXO?si=e83fa6b123274d45"
 					title="Escolta-la"
-					className="bg-[#1DB954] button rounded-full mt-2 py-2 hover:bg-[#168b3f] transition-all duration-300 ease-in-out text-11 group"
+					className="bg-[#1DB954] button rounded-full mt-2 py-2 px-3 hover:bg-[#168b3f] transition-all duration-300 ease-in-out text-11 group"
 					target="_blank"
 					rel="nofollow noreferrer"
 				>
@@ -49,14 +49,14 @@ const PlaylistToast = () => {
 				</a>
 			</div>
 			<button
-				className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2  rounded-full p-0.5 bg-white shadow-lg"
+				className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 rounded-full p-0.5 bg-white shadow-lg"
 				onClick={() => setToast(false)}
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					className="text-black"
-					width={16}
-					height={16}
+					width={14}
+					height={14}
 					viewBox="0 0 24 24"
 					strokeWidth="2"
 					stroke="currentColor"

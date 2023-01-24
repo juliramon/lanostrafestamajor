@@ -3,6 +3,10 @@
 @import "pages/home"
 
 // Components
+@import "components/accordion"
+@import "components/buttons"
+@import "components/menu"
+@import "components/playlist-toast"
 
 // Vendors
 @import "vendors/tailwind"
@@ -57,3 +61,19 @@
 		@apply leading-normal my-0 text-primary-500 uppercase
 		@screen lg
 			@apply leading-none
+
+	label, legend
+		@apply text-xs block mb-1 text-primary-500
+
+	input, select, textarea
+		@apply border-b border-primary-300 text-lg text-black font-tenez block w-full resize-y
+
+	input[type=radio]
+		width: auto
+		height: auto
+
+	textarea
+		min-height: 70px
+
+	input:focus, select:focus, textarea:focus
+		@apply outline-none border-primary-500

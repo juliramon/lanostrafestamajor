@@ -30,22 +30,22 @@ const Counter = ({ deadline }) => {
 
 	return (
 		<div className="flex items-center justify-center relative z-20">
-			<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center">
+			<div className="text-4xl md:text-6xl font-tenez text-secondary-100 px-1.5 md:px-4 inline-flex flex-col items-center">
 				{leading0(state.days)}
 				<span className="uppercase block text-lg">dies</span>
 			</div>
 			<span className="text-2xl text-secondary-100 opacity-80">:</span>
-			<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center min-w-[100px]">
+			<div className="text-4xl md:text-6xl font-tenez text-secondary-100 px-1.5 md:px-4 inline-flex flex-col items-center min-w-[70px] md:min-w-[100px]">
 				{leading0(state.hours)}
 				<span className="uppercase block text-lg">hrs</span>
 			</div>
 			<span className="text-2xl text-secondary-100 opacity-80">:</span>
-			<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center min-w-[100px]">
+			<div className="text-4xl md:text-6xl font-tenez text-secondary-100 px-1.5 md:px-4 inline-flex flex-col items-center min-w-[70px] md:min-w-[100px]">
 				{leading0(state.minutes)}
 				<span className="uppercase block text-lg">min</span>
 			</div>
 			<span className="text-2xl text-secondary-100 opacity-80">:</span>
-			<div className="text-6xl font-tenez text-secondary-100 px-4 inline-flex flex-col items-center min-w-[100px]">
+			<div className="text-4xl md:text-6xl font-tenez text-secondary-100 px-1.5 md:px-4 inline-flex flex-col items-center min-w-[70px] md:min-w-[100px]">
 				{leading0(state.seconds)}
 				<span className="uppercase block text-lg">seg</span>
 			</div>

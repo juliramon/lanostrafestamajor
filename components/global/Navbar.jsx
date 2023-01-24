@@ -29,10 +29,10 @@ const Navbar = ({ navScrolled }) => {
 				openMenu ? "nav--open" : ""
 			}`}
 		>
-			<div className="w-full md:w-1/3 relative flex items-center">
+			<div className="flex-auto md:w-1/3 relative flex items-center justify-start">
 				<button
 					type="button"
-					className="uppercase text-sm inline-flex items-center tracking-widest nav__menu-button"
+					className="uppercase text-sm inline-flex items-center tracking-widest nav__menu-button text-white"
 					onClick={() => setOpenMenu(!openMenu)}
 				>
 					<div className="w-5 h-5 mr-2.5 flex flex-wrap items-center justify-center nav__menu-button-icon">
@@ -41,7 +41,7 @@ const Navbar = ({ navScrolled }) => {
 					</div>
 					Menu
 				</button>
-				<div className="absolute top-[52px] -left-6 bg-primary-500 py-2.5 px-2 min-w-[300px] nav__dropdown">
+				<div className="absolute top-[42px] md:top-[52px] -left-6 bg-primary-500 py-2.5 px-2 min-w-[300px] nav__dropdown">
 					<ul>
 						<li>
 							<a
@@ -106,7 +106,7 @@ const Navbar = ({ navScrolled }) => {
 					</ul>
 				</div>
 			</div>
-			<div className="w-full md:w-1/3 text-center flex justify-center">
+			<div className="flex-auto md:w-1/3 text-center flex justify-end md:justify-center">
 				<a
 					href="/"
 					title="Andrea & Juli"
@@ -115,22 +115,26 @@ const Navbar = ({ navScrolled }) => {
 					Andrea & Juli
 				</a>
 			</div>
-			<div className="w-full md:w-1/3 flex justify-end">
+			<div className="w-full md:w-1/3 hidden md:flex justify-end">
 				{router.pathname == "confirmar-assistencia" ? (
-					<a
-						href="#"
-						title="Confirmar assistència"
-						className="button nav__button"
-					>
-						Confirmar assistència
-					</a>
-				) : (
 					<a
 						href="tel:+34626138170"
 						title="Necessites ajuda?"
 						className="button nav__button"
 					>
 						Necessites ajuda?
+					</a>
+				) : (
+					<a
+						href="/confirmar-assistencia"
+						title="Com arribar-hi"
+						className="button button__primary--blue inline-flex items-center"
+						target="_blank"
+						rel="nofollow noreferrer"
+					>
+						<span className="inline-block -mb-px mr-2">
+							Confirmar assistència
+						</span>
 					</a>
 				)}
 			</div>

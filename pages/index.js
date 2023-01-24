@@ -20,10 +20,6 @@ const Home = () => {
 				"La vostra presència serà el millor regal, però si tot i així voleu fer-nos un obsequi, agraïrem molt la vostra aportació al número de compte que hem habilitat: ES28 2100 3973 9202 0041 7262 per ajudar-nos a fer del viatge de noces un moment per recordar.",
 		},
 		{
-			title: "Hi ha allotjaments a la vora on poder passar la nit?",
-			description: "",
-		},
-		{
 			title: "Com es diu l'espai on es celebrarà el casament?",
 			description:
 				"L'espai on es celebrarà tant la cerimònia com el convit és Ca n'Alzina - Espai Gastronomia, i es troba situat a les afores del petit poble de Rubió (Igualada). És important no confondre el nom de l'espai amb el del poble de Ca n'Alzina; el correcte és el primer.",
@@ -109,8 +105,8 @@ const Home = () => {
 							/>
 						</picture>
 					</div>
-					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-						<div className="max-w-lg mx-auto">
+					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:w-auto">
+						<div className="max-w-full md:max-w-lg mx-auto px-6 md:px-0">
 							<h1 className="text-white uppercase font-bold">
 								Benvinguts a la gran escapada.
 							</h1>
@@ -130,9 +126,9 @@ const Home = () => {
 				<section className="flex flex-wrap items-stretch relative z-30">
 					<span id="introduccio" className="absolute -top-20"></span>
 					<div className="w-full lg:w-8/12 relative lg:pt-48 lg:pb-32 flex flex-wrap items-center justify-center">
-						<div className="relative z-10 max-w-lg mx-auto">
+						<div className="relative z-10 max-w-lg mx-auto px-6 md:px-0 pt-10 pb-32">
 							<h2>
-								Després de 9 anys i moltes escapades junts, hem dicidit que és
+								Després de 9 anys i moltes escapades junts, hem decidit que és
 								el moment de fer-ne una de grossa!
 							</h2>
 							<p className="mt-6 text-primary-400">
@@ -140,7 +136,7 @@ const Home = () => {
 								casamenT. No hi podeu faltar!
 							</p>
 							<a
-								href="/"
+								href="/confirmar-assistencia"
 								title="Confirmar assistència"
 								className="button button__primary mt-12"
 							>
@@ -169,11 +165,11 @@ const Home = () => {
 						</div>
 					</div>
 					<div className="w-full lg:w-4/12 relative z-30">
-						<iv className="absolute -left-12 -top-5 z-10">
+						<iv className="absolute right-10 md:right-auto md:-left-12 -top-56 md:-top-5 z-10">
 							<picture>
 								<img
 									src="img/home/andrea-juli-frame.png"
-									className="w-56 h-auto rotate-6 shadow-xl"
+									className="w-24 md:w-56 h-auto rotate-6 shadow-xl"
 								/>
 							</picture>
 						</iv>
@@ -189,7 +185,7 @@ const Home = () => {
 				</section>
 
 				{/* Section location */}
-				<section className="relative py-44 px-14 flex justify-end">
+				<section className="relative py-44 px-10 md:px-14 flex flex-wrap justify-end">
 					<span id="localitzacio" className="absolute -top-20"></span>
 					<div className="absolute inset-0 z-0">
 						<iframe
@@ -197,42 +193,68 @@ const Home = () => {
 							width="600"
 							height="450"
 							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
+							referrerPolicy="no-referrer-when-downgrade"
 							className="w-full h-full object-cover"
 						></iframe>
 					</div>
-					<div className="p-14 bg-white relative z-10 w-full lg:w-5/12 overflow-hidden">
+					<div className="p-6 md:p-14 bg-white relative z-10 w-full lg:w-5/12 overflow-hidden">
 						<div className="relative z-10">
 							<h2 className="my-0 max-w-lg">
-								Ens veiem el proper <br /> dissabte 01 d'abril de 2023 <br /> a
-								Ca N'alzina, Rubió (Igualada).
+								Ens veiem el proper <br /> dissabte 01 d'abril de 2023 a les
+								17:00h a Ca N'alzina, Rubió (Igualada).
 							</h2>
-							<a
-								href="https://g.page/canalzina?share"
-								title="Com arribar-hi"
-								className="button button__primary mt-8 inline-flex items-center"
-								target="_blank"
-								rel="nofollow noreferrer"
-							>
-								<span className="inline-block -mb-px mr-2">Com arribar-hi</span>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="20"
-									height="20"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									fill="none"
-									strokeLinecap="round"
-									strokeLinejoin="round"
+							<p className="mt-3 text-primary-400 max-w-lg">
+								En cas de dubtes sobre com arribar a Ca N'Alzina, ens podeu fer
+								un truc al{" "}
+								<a
+									href="tel:+34626138170"
+									title="+34 626 138 170"
+									className="underline hover:text-primary-500 transition-all duration-300 ease-in-out"
 								>
-									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-									<path d="M8 21h4"></path>
-									<path d="M10 21v-10"></path>
-									<path d="M10 6v-3"></path>
-									<path d="M6 6h10l2 2.5l-2 2.5h-10z"></path>
-								</svg>
-							</a>
+									+34 626 138 170
+								</a>
+							</p>
+							<div className="flex flex-wrap items-stretch mt-8">
+								<a
+									href="https://g.page/canalzina?share"
+									title="Com arribar-hi"
+									className="button button__primary inline-flex items-center w-full md:w-auto justify-center"
+									target="_blank"
+									rel="nofollow noreferrer"
+								>
+									<span className="inline-block -mb-px mr-2">
+										Com arribar-hi
+									</span>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+										stroke="currentColor"
+										fill="none"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+									>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+										<path d="M8 21h4"></path>
+										<path d="M10 21v-10"></path>
+										<path d="M10 6v-3"></path>
+										<path d="M6 6h10l2 2.5l-2 2.5h-10z"></path>
+									</svg>
+								</a>
+								<a
+									href="/confirmar-assistencia"
+									title="Com arribar-hi"
+									className="button button__primary--blue inline-flex items-center mt-3 md:mt-0 md:ml-3 justify-center w-full"
+									target="_blank"
+									rel="nofollow noreferrer"
+								>
+									<span className="inline-block -mb-px mr-2">
+										Confirmar assistència
+									</span>
+								</a>
+							</div>
 						</div>
 						<div className="absolute bottom-0 right-0 opacity-60 z-0 h-full">
 							<picture>
@@ -258,9 +280,9 @@ const Home = () => {
 				</section>
 
 				{/* Section agenda */}
-				<section className="relative flex items-stretch">
+				<section className="relative flex flex-wrap items-stretch">
 					<span id="agenda" className="absolute -top-20"></span>
-					<div className="w-full lg:w-4/12 flex flex-col relative">
+					<div className="w-full lg:w-4/12 flex flex-col relative order-2 md:order-none">
 						<div className="absolute inset-0 opacity-60 z-0">
 							<picture>
 								<img
@@ -290,7 +312,7 @@ const Home = () => {
 							</picture>
 						</div>
 					</div>
-					<div className="w-full lg:w-8/12 relative lg:pt-40 lg:pb-52">
+					<div className="w-full lg:w-8/12 relative pt-10 pb-14 px-6 md:px-0 lg:pt-40 lg:pb-52 order-1 md:order-none">
 						<div className="absolute inset-0 opacity-50 z-0">
 							<picture>
 								<img
@@ -307,10 +329,10 @@ const Home = () => {
 								Aquesta és l'agenda del dia; feu-li un cop d'ull.
 							</h2>
 							<div className="relative">
-								<ul className="mt-12 relative z-20">
-									{agenda.map((item, key) => (
+								<ul className="mt-8 md:mt-12 relative z-20">
+									{agenda.map((item, idx) => (
 										<Agenda
-											idx={key}
+											key={idx}
 											title={item.title}
 											description={item.description}
 										/>
@@ -320,7 +342,7 @@ const Home = () => {
 									<a
 										href="https://g.page/canalzina?share"
 										title="Confirmar assistència"
-										className="button button__primary--white mt-6"
+										className="button button__primary--white mt-6 w-full md:w-auto justify-center"
 									>
 										Confirmar assistència
 									</a>
@@ -357,9 +379,9 @@ const Home = () => {
 				{/* Section nuvis */}
 				<section className="relative">
 					{/* Panel countdown */}
-					<div className="absolute z-30 top-0 -translate-y-1/2 w-9/12 left-1/2 -translate-x-1/2">
+					<div className="absolute z-30 top-0 -translate-y-1/2 w-full md:w-9/12 left-1/2 -translate-x-1/2">
 						<div className="container">
-							<div className="w-full lg:w-8/12 lg:mx-auto px-10 py-20 relative overflow-hidden shadow-lg">
+							<div className="w-full lg:w-8/12 lg:mx-auto px-10 py-12 md:py-20 relative overflow-hidden shadow-lg">
 								<div className="absolute inset-0 z-0">
 									<picture>
 										<img
@@ -397,20 +419,20 @@ const Home = () => {
 
 					<span id="nuvis" className="absolute -top-20"></span>
 
-					<div className="relative lg:pt-64 lg:pb-32 overflow-hidden z-20">
+					<div className="relative pt-64 pb-32 overflow-hidden z-20">
 						<div className="container relative z-20">
 							<h2 className="text-center max-w-xl mx-auto">
 								Els nuvis.
-								<br /> Una breu introducció a tot el que ens ha portat fins a
-								aquest punt.
+								<br /> Una breu resum a tot el que ens ha portat fins a aquest
+								punt.
 							</h2>
 							<div className="mt-14">
-								<div className="flex flex-wrap justify-center">
-									<div className="px-14 rotate-3">
+								<div className="flex flex-wrap justify-center relative">
+									<div className="px-14 rotate-3 relative z-10">
 										<picture>
 											<img
 												src="img/andrea-juli-timeline-nuvia.png"
-												alt=""
+												alt="Andrea Prat, la núvia"
 												className="shadow-xl w-full md:w-64 h-auto mx-auto"
 												loading="lazy"
 											/>
@@ -419,14 +441,17 @@ const Home = () => {
 											<h3 className="text-lg text-center text-black">
 												Andrea Prat, la núvia
 											</h3>
-											<span className="text-sm text-gray-500">Molt fan de</span>
+											<span className="text-sm text-gray-500 max-w-xs inline-block">
+												Molt fan d'il·lustrar i de qualsevol esport que l'hi
+												proposis
+											</span>
 										</div>
 									</div>
-									<div className="px-14 -rotate-6">
+									<div className="px-14 -rotate-6 mt-14 lg:mt-0">
 										<picture>
 											<img
 												src="img/andrea-juli-timeline-nuvi.png"
-												alt=""
+												alt="Juli Ramon, el nuvi"
 												className="shadow-xl w-full md:w-64 h-auto mx-auto"
 												loading="lazy"
 											/>
@@ -435,17 +460,20 @@ const Home = () => {
 											<h3 className="text-lg text-center text-black">
 												Juli Ramon, el nuvi
 											</h3>
-											<span className="text-sm text-gray-500">Molt fan de</span>
+											<span className="text-sm text-gray-500 max-w-xs inline-block">
+												Molt fan de picar codi i de dormir fins ben tard (si
+												l'Andrea l'hi permet)
+											</span>
 										</div>
 									</div>
 								</div>
-								<div className="flex flex-wrap justify-center mt-16">
-									<div className="px-14 -rotate-2 flex flex-col justify-center">
+								<div className="flex flex-wrap justify-center mt-16 md:mt-0">
+									<div className="px-4 rotate-6 flex flex-col justify-center relative md:-left-12">
 										<picture>
 											<img
 												src="img/andrea-juli-timeline-01.png"
-												alt=""
-												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												alt="22 de maig, 2013"
+												className="shadow-xl w-52 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
@@ -459,14 +487,12 @@ const Home = () => {
 											</span>
 										</div>
 									</div>
-								</div>
-								<div className="flex flex-wrap justify-center mt-16">
-									<div className="px-14 rotate-6 flex flex-col justify-center relative -left-44">
+									<div className="px-4 -rotate-6 flex flex-col justify-center relative md:-right-12 mt-14 md:mt-20">
 										<picture>
 											<img
 												src="img/andrea-juli-timeline-02.png"
-												alt=""
-												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												alt="26 d'octubre, 2013"
+												className="shadow-xl w-52 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
@@ -475,28 +501,114 @@ const Home = () => {
 												26 d'octubre, 2013
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Comencem a sortir junts
+												Comencem a sortir junts, sembla que la cosa promet
 											</span>
 										</div>
 									</div>
 								</div>
-								<div className="flex flex-wrap justify-center mt-6">
-									<div className="px-14 -rotate-6 flex flex-col justify-center relative -right-44">
+								<div className="flex flex-wrap justify-center mt-12 md:mt-0">
+									<div className="px-4 rotate-6 flex flex-col justify-center relative md:-left-12">
 										<picture>
 											<img
-												src="img/andrea-juli-timeline-01.png"
-												alt=""
-												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												src="img/andrea-juli-timeline-03.png"
+												alt="15 maig 2015"
+												className="shadow-xl w-52 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
 										<div className="mt-5 text-center">
 											<span className="text-sm text-gray-500">
-												22 de maig, 2013
+												15 maig 2015
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Ens coneixem a <u>sala Bikini</u> en una nit que cap
-												dels dos oblidarà
+												Primer viatge junts, de molts{" "}
+												<span className="opacity-40 block">
+													(Venècia, Sardenya, Suècia, Menorca, Beijing i Tai'an
+													(Xina), Ginebra, Madeira, París, Helsinki i Ivalo
+													(Finlàndia), Shangai i Wuxi (Xina), Àustria, Mallorca,
+													País Basc, Madrid, Bèlgica
+												</span>
+											</span>
+										</div>
+									</div>
+									<div className="px-4 -rotate-5 flex flex-col justify-center relative md:-right-12 mt-20">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-04.png"
+												alt="22 agost, 2017"
+												className="shadow-xl w-52 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-5 text-center">
+											<span className="text-sm text-gray-500">
+												22 agost, 2017
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Ens proposem anar a viure junts. De moment ens conformem
+												amb un pis més petit que el Castell Disney
+											</span>
+										</div>
+									</div>
+								</div>
+								<div className="flex flex-wrap justify-center mt-12 md:mt-0">
+									<div className="px-4 rotate-12 flex flex-col justify-center relative md:-left-12">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-05.png"
+												alt="25 agost, 2019"
+												className="shadow-xl w-52 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-5 text-center">
+											<span className="text-sm text-gray-500">
+												25 agost, 2019
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Apareix en Bru a les nostres vides, el nostre secretari
+												i company d'escapades
+											</span>
+										</div>
+									</div>
+									<div className="px-4 -rotate-3 flex flex-col justify-center relative md:-right-12 mt-20">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-06.png"
+												alt="25 maig 2020"
+												className="shadow-xl w-52 h-auto mx-auto -rotate-90"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="text-center">
+											<span className="text-sm text-gray-500">
+												25 maig 2020
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Finalment, després de dos anys d'obres, el covid i molts
+												aprenentatges, anem a viure junts
+											</span>
+										</div>
+									</div>
+								</div>
+								<div className="flex flex-wrap justify-center mt-10">
+									<div className="px-4 rotate-2 flex flex-col justify-center">
+										<picture>
+											<img
+												src="img/andrea-juli-timeline-07.png"
+												alt="29 gener 2022"
+												className="shadow-xl w-52 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="mt-5 text-center">
+											<span className="text-sm text-gray-500">
+												29 gener 2022
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												Després de vuit anys i una mica més, en Juli es decideix
+												a fer la gran pregunta, i l'Andrea diu que sí. Ens
+												prometem!
 											</span>
 										</div>
 									</div>
@@ -505,17 +617,33 @@ const Home = () => {
 						</div>
 						<picture>
 							<img
-								src="img/home/flors-right.png"
+								src="img/home/flors-vertical-olive.png"
 								alt=""
-								className="object-cover absolute left-0 top-0 w-1/2"
+								className="object-cover absolute top-1/4 left-0 w-auto h-auto opacity-25"
 								loading="lazy"
 							/>
 						</picture>
 						<picture>
 							<img
-								src="img/home/flors-right.png"
+								src="img/home/flors-vertical-olive.png"
 								alt=""
-								className="object-cover absolute right-0 top-0 w-1/2"
+								className="object-cover absolute bottom-0 right-0 w-auto h-auto opacity-25 rotate-180"
+								loading="lazy"
+							/>
+						</picture>
+						<picture>
+							<img
+								src="img/home/flors-countdown-right.png"
+								alt=""
+								className="object-cover absolute -top-10 left-1/2 -translate-x-1/2 w-auto h-auto"
+								loading="lazy"
+							/>
+						</picture>
+						<picture>
+							<img
+								src="white-paper-texture.jpg"
+								alt=""
+								className="object-cover absolute inset-0 w-full h-full opacity-30"
 								loading="lazy"
 							/>
 						</picture>
@@ -523,10 +651,10 @@ const Home = () => {
 				</section>
 
 				{/* Section FAQs */}
-				<section className="relative">
+				<section className="relative flex flex-wrap items-stretch">
 					<span id="faqs" className="absolute -top-20"></span>
-					<div className="w-full lg:w-8/12 relative lg:pt-56 lg:pb-32 flex flex-wrap items-center justify-center">
-						<div className="relative z-10 max-w-2xl mx-auto">
+					<div className="w-full lg:w-8/12 relative lg:pt-56 lg:pb-32 flex flex-wrap items-center justify-center order-2 md:order-none">
+						<div className="relative z-10 max-w-2xl mx-auto py-12 px-6 md:px-0">
 							<h2 className="max-w-lg">
 								Preguntes i respostes freqüents que, potser, us ajuden a fer
 								l'espera més lleugera.
@@ -562,12 +690,30 @@ const Home = () => {
 							</picture>
 						</div>
 					</div>
-					<div className="w-full lg:w-4/12 relative">
+					<div className="w-full lg:w-4/12 flex flex-col relative order-1 md:order-none">
+						<div className="w-full lg:h-1/2">
+							<picture>
+								<img
+									src="img/home/ca-nalzina-agenda-2.jpg"
+									data-src="img/home/ca-nalzina-agenda-2.jpg"
+									className="w-full h-full object-cover"
+								></img>
+							</picture>
+						</div>
+						<div className="w-full lg:h-1/2">
+							<picture>
+								<img
+									src="img/home/ca-nalzina-agenda-1.jpg"
+									data-src="img/home/ca-nalzina-agenda-1.jpg"
+									className="w-full h-full object-cover"
+								></img>
+							</picture>
+						</div>
 						<picture>
 							<img
 								src="img/home/flors-right.png"
 								alt=""
-								className="w-full h-full object-cover absolute top-0 right-9"
+								className="absolute w-full h-full inset-0 opacity-60 z-0"
 								loading="lazy"
 							/>
 						</picture>
@@ -576,6 +722,7 @@ const Home = () => {
 
 				{/* Section contacte */}
 				<section className="relative bg-primary-500 text-zinc-200 py-12 lg:py-24">
+					<span id="contacte" className="absolute -top-20"></span>
 					<div className="container relative z-20">
 						<div className="w-full lg:w-8/12 lg:mx-auto">
 							<div className="-mx-6 flex flex-wrap items-center justify-between">
@@ -583,14 +730,14 @@ const Home = () => {
 									<h2 className="text-zinc-200">
 										Seguiu tenint dubtes? Contacteu-nos.
 									</h2>
-									<p className="mt-6 text-zinc-300">
+									<p className="mt-4 md:mt-6 text-zinc-300">
 										Si en aquest punt seguiu teniu dubtes o preguntes que no us
 										hem resolt, no dubteu en contactar-nos pels canals que
 										trobareu a continuació. Estarem més que encantats
 										d'ajudar-vos.
 									</p>
 								</div>
-								<ul className="list-none m-0 px-6 w-full lg:w-1/3">
+								<ul className="list-none m-0 px-6 w-full lg:w-1/3 mt-8 md:mt-0">
 									<li className="mb-2.5">
 										<h3 className="normal-case text-3xl text-zinc-200">
 											<a

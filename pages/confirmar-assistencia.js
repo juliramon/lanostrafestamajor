@@ -145,10 +145,12 @@ const ConfirmarAssistencia = () => {
 				<Navbar navScrolled={true} />
 
 				<section className="flex flex-wrap items-stretch relative z-30 h-screen">
-					<div className="w-full relative flex flex-wrap items-center justify-center lg:pt-48 lg:pb-32">
-						<div className="relative z-10 max-w-3xl mx-auto bg-white p-12">
-							<h1 className="text-5xl text-center">Confirmar assistència</h1>
-							<p className="mt-3 text-gray-500 text-center text-lg leading-snug font-tenez">
+					<div className="w-full relative flex flex-wrap items-center justify-center pt-48 lg:pb-32">
+						<div className="relative z-10 max-w-3xl mx-auto bg-white py-12 px-6 md:p-12">
+							<h1 className="text-3xl md:text-5xl md:text-center">
+								Confirmar assistència
+							</h1>
+							<p className="mt-3 text-gray-500 md:text-center text-base md:text-lg leading-snug font-tenez">
 								Omple el formulari per confirmar la teva assistència al
 								casament.
 								<br />
@@ -320,7 +322,7 @@ const ConfirmarAssistencia = () => {
 								<fieldset className="w-full lg:w-1/2 px-6 flex justify-center mt-4">
 									<button
 										type="submit"
-										className="button button__primary--blue"
+										className="button button__primary--blue w-full md:w-auto justify-center"
 									>
 										Confirmar assistència
 									</button>

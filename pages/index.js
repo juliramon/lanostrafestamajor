@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/global/Footer";
+
+import Navbar from "../components/global/Navbar";
 import Accordion from "../components/accordions/Accordion";
 import Agenda from "../components/others/Agenda";
 import Counter from "../components/others/Counter";

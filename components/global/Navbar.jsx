@@ -45,7 +45,7 @@ const Navbar = ({ navScrolled }) => {
 					<ul>
 						<li>
 							<a
-								href="#introduccio"
+								href="/#introduccio"
 								title="Introducció"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
 								onClick={() => setOpenMenu(!openMenu)}
@@ -55,7 +55,7 @@ const Navbar = ({ navScrolled }) => {
 						</li>
 						<li>
 							<a
-								href="#localitzacio"
+								href="/#localitzacio"
 								title="Localització"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
 								onClick={() => setOpenMenu(!openMenu)}
@@ -65,7 +65,7 @@ const Navbar = ({ navScrolled }) => {
 						</li>
 						<li>
 							<a
-								href="#agenda"
+								href="/#agenda"
 								title="Horari i agenda"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
 								onClick={() => setOpenMenu(!openMenu)}
@@ -75,7 +75,7 @@ const Navbar = ({ navScrolled }) => {
 						</li>
 						<li>
 							<a
-								href="#nuvis"
+								href="/#nuvis"
 								title="Els nuvis"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
 								onClick={() => setOpenMenu(!openMenu)}
@@ -85,7 +85,7 @@ const Navbar = ({ navScrolled }) => {
 						</li>
 						<li>
 							<a
-								href="#faqs"
+								href="/#faqs"
 								title="Preguntes freqüents"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
 								onClick={() => setOpenMenu(!openMenu)}
@@ -95,7 +95,7 @@ const Navbar = ({ navScrolled }) => {
 						</li>
 						<li>
 							<a
-								href="#contacte"
+								href="/#contacte"
 								title="Contacte"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
 								onClick={() => setOpenMenu(!openMenu)}

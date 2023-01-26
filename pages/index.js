@@ -247,7 +247,7 @@ const Home = () => {
 								<a
 									href="/confirmar-assistencia"
 									title="Com arribar-hi"
-									className="button button__primary--blue inline-flex items-center mt-3 md:mt-0 md:ml-3 justify-center w-full"
+									className="button button__primary--blue inline-flex items-center mt-3 md:mt-0 md:ml-3 justify-center w-full md:w-auto"
 									target="_blank"
 									rel="nofollow noreferrer"
 								>
@@ -281,7 +281,7 @@ const Home = () => {
 				</section>
 
 				{/* Section agenda */}
-				<section className="relative flex flex-wrap items-stretch">
+				<section className="relative flex flex-wrap items-stretch overflow-hidden">
 					<span id="agenda" className="absolute -top-20"></span>
 					<div className="w-full lg:w-4/12 flex flex-col relative order-2 md:order-none">
 						<div className="absolute inset-0 opacity-60 z-0">

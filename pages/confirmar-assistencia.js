@@ -14,8 +14,7 @@ const ConfirmarAssistencia = () => {
 		foodAllergies: "",
 		hasSpecialDiet: "false",
 		specialDiet: "",
-		serverMessage:
-			"Formulari enviat correctament! Moltes gràcies per confirmar assistència :)",
+		serverMessage: "",
 	};
 
 	const [formData, setFormData] = useState(initialState);
@@ -76,12 +75,13 @@ const ConfirmarAssistencia = () => {
 						foodAllergies: "",
 						hasSpecialDiet: "false",
 						specialDiet: "",
-						serverMessage: res.message,
+						serverMessage:
+							"Formulari enviat correctament! Moltes gràcies per confirmar assistència :)",
 					});
 					setToastState({ ...formData, isVisible: true, duration: 5000 });
 					setTimeout(
 						() => setToastState({ ...toastState, isVisible: false }),
-						5000
+						8000
 					);
 				}
 			})

@@ -63,9 +63,7 @@ const ConfirmarAssistencia = () => {
 			phone !== "" &&
 			email !== "" &&
 			hasFoodAllergy !== "" &&
-			foodAllergies !== "" &&
-			hasSpecialDiet !== "" &&
-			specialDiet !== ""
+			hasSpecialDiet !== ""
 		) {
 			handleSubmit(
 				firstName,
@@ -138,7 +136,7 @@ const ConfirmarAssistencia = () => {
 	) : null;
 
 	const alertContainer = alertState.isVisible ? (
-		<div className="w-full rounded-md bg-secondary-100 text-secondary-900 py-3 px-3 transition-all duration-300 ease-in-out flex items-center text-sm">
+		<div className="w-full rounded-md bg-secondary-100 text-secondary-900 py-3 px-3 transition-all duration-300 ease-in-out flex items-center text-sm mt-4">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				className="icon icon-tabler icon-tabler-alert-circle mr-2"

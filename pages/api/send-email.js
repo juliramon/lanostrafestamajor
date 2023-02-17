@@ -27,7 +27,7 @@ async function sendEmail(req, res) {
 	  <li><strong>Té al·lèrgies alimentàries?</strong> ${hasFoodAllergy}</li>
 	  <li><strong>Quina/es:</strong> ${foodAllergies}</li>
 	  <li><strong>Segueix alguna dieta especial?</strong> ${hasSpecialDiet}</li>
-	  <li><strong>Quina:</strong> ${foospecialDietdAllergies}</li>
+	  <li><strong>Quina:</strong> ${specialDiet}</li>
       </ul>`,
 		});
 	} catch (error) {

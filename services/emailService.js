@@ -12,13 +12,26 @@ class EmailService {
 		this.service = service;
 	}
 
-	sendConfirmAttendance = (firstName, surName, phone, email) => {
+	sendConfirmAttendance = (
+		firstName,
+		surName,
+		phone,
+		email,
+		hasFoodAllergy,
+		foodAllergies,
+		hasSpecialDiet,
+		specialDiet
+	) => {
 		return this.service
 			.post("/api/send-email", {
 				firstName,
 				surName,
 				phone,
 				email,
+				hasFoodAllergy,
+				foodAllergies,
+				hasSpecialDiet,
+				specialDiet,
 			})
 			.then((res) => res.data);
 	};

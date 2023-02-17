@@ -47,9 +47,36 @@ const ConfirmarAssistencia = () => {
 
 	const validateFormData = (e) => {
 		e.preventDefault();
-		const { firstName, surName, phone, email } = formData;
-		if (firstName !== "" && surName !== "" && phone !== "" && email !== "") {
-			handleSubmit(firstName, surName, phone, email);
+		const {
+			firstName,
+			surName,
+			phone,
+			email,
+			hasFoodAllergy,
+			foodAllergies,
+			hasSpecialDiet,
+			specialDiet,
+		} = formData;
+		if (
+			firstName !== "" &&
+			surName !== "" &&
+			phone !== "" &&
+			email !== "" &&
+			hasFoodAllergy !== "" &&
+			foodAllergies !== "" &&
+			hasSpecialDiet !== "" &&
+			specialDiet !== ""
+		) {
+			handleSubmit(
+				firstName,
+				surName,
+				phone,
+				email,
+				hasFoodAllergy,
+				foodAllergies,
+				hasSpecialDiet,
+				specialDiet
+			);
 		} else {
 			setAlertState({ ...alertState, isVisible: true });
 			setTimeout(
@@ -61,9 +88,27 @@ const ConfirmarAssistencia = () => {
 
 	const emailService = new EmailService();
 
-	const handleSubmit = (name, phone, email, website, message) => {
+	const handleSubmit = (
+		firstName,
+		surName,
+		phone,
+		email,
+		hasFoodAllergy,
+		foodAllergies,
+		hasSpecialDiet,
+		specialDiet
+	) => {
 		emailService
-			.sendConfirmAttendance(name, phone, email, website, message)
+			.sendConfirmAttendance(
+				firstName,
+				surName,
+				phone,
+				email,
+				hasFoodAllergy,
+				foodAllergies,
+				hasSpecialDiet,
+				specialDiet
+			)
 			.then((res) => {
 				if (res.status === 200) {
 					setFormData({

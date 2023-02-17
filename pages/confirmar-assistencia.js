@@ -14,7 +14,8 @@ const ConfirmarAssistencia = () => {
 		foodAllergies: "",
 		hasSpecialDiet: "false",
 		specialDiet: "",
-		serverMessage: "",
+		serverMessage:
+			"Formulari enviat correctament! Moltes gràcies per confirmar assistència :)",
 	};
 
 	const [formData, setFormData] = useState(initialState);
@@ -50,7 +51,6 @@ const ConfirmarAssistencia = () => {
 		const { firstName, surName, phone, email } = formData;
 		if (firstName !== "" && surName !== "" && phone !== "" && email !== "") {
 			handleSubmit(firstName, surName, phone, email);
-			console.log("submit!");
 		} else {
 			setAlertState({ ...alertState, isVisible: true });
 			setTimeout(
@@ -78,7 +78,7 @@ const ConfirmarAssistencia = () => {
 						specialDiet: "",
 						serverMessage: res.message,
 					});
-					setToastState({ ...formsState, isVisible: true, duration: 5000 });
+					setToastState({ ...formData, isVisible: true, duration: 5000 });
 					setTimeout(
 						() => setToastState({ ...toastState, isVisible: false }),
 						5000
@@ -89,7 +89,7 @@ const ConfirmarAssistencia = () => {
 	};
 
 	const notification = toastState.isVisible ? (
-		<FormToast message={formsState.serverMessage} />
+		<FormToast message={formData.serverMessage} />
 	) : null;
 
 	const alertContainer = alertState.isVisible ? (

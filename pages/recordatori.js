@@ -20,12 +20,11 @@ const Recordatori = () => {
 					name="description"
 					content="La gran escapada, la festa on l'Andrea i en Juli faran el gran pas! Us esperem a Ca n'Alzina, Rubió (Igualada)"
 				></meta>
-				<link
-					rel="canonical"
-					href="https://www.lagranescapada.cat/confirmar-assistencia"
-				></link>
 				<meta name="robots" content="Index,Follow"></meta>
-				<meta property="og:image" content="/share.jpg"></meta>
+				<meta
+					property="og:image"
+					content="https://res.cloudinary.com/dk2qo76qq/image/upload/v1676809293/poster-40-dies-la-gran-escapada_r1tqpi.jpg"
+				></meta>
 			</Head>
 
 			<main>

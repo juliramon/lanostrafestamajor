@@ -49,15 +49,19 @@ const Home = () => {
 		},
 		{
 			title: "La cerimònia",
-			description: "17:30 a 19:30 h - Un moment per recodar",
+			description: "17:30 a 18:30 h - Un moment per recodar",
+		},
+		{
+			title: "Les fotografies",
+			description: "18:30 a 19:00 h - Inmortalitzem el moment",
 		},
 		{
 			title: "L'aperitiu",
-			description: "19:00 a 21:00 h - Per anar escalfant motors",
+			description: "19:00 a 20:30 h - Per anar escalfant motors",
 		},
 		{
 			title: "El convit",
-			description: "21:00 a 23:30 h - Que no hi falti de res",
+			description: "20:30 a 23:30 h - Que no hi falti de res",
 		},
 		{
 			title: "La festa",

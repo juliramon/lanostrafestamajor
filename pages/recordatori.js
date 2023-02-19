@@ -33,8 +33,8 @@ const Recordatori = () => {
 				<Navbar navScrolled={true} />
 
 				<section className="flex flex-wrap items-stretch relative z-30 h-screen">
-					<div className="w-full relative flex flex-wrap items-center justify-center pt-48 lg:pb-32">
-						<div className="relative z-10 max-w-3xl mx-auto bg-white py-12 px-6 md:p-12">
+					<div className="w-full relative flex flex-wrap items-center justify-center px-4 lg:px-0 lg:pt-32">
+						<div className="relative z-10 max-w-3xl mx-auto bg-white">
 							<video
 								poster="https://res.cloudinary.com/dk2qo76qq/image/upload/v1676809293/poster-40-dies-la-gran-escapada_r1tqpi.jpg"
 								controls
@@ -45,7 +45,7 @@ const Recordatori = () => {
 									type="video/mp4"
 								/>
 							</video>
-							<div className="mt-6 max-w-lg mx-auto flex flex-col items-center">
+							<div className="max-w-lg mx-auto flex flex-col items-center px-6 py-6 lg:pt-8 lg:pb-10">
 								<p className="text-xs text-center opacity-60 leading-relaxed">
 									Tens al·lèrgies alimentàries o segueixes una dieta especial?
 									Confirma la teva assistència i explica'ns-ho per tenir-ho en

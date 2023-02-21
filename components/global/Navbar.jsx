@@ -95,6 +95,16 @@ const Navbar = ({ navScrolled }) => {
 						</li>
 						<li>
 							<a
+								href="/#viatge"
+								title="El viatge de noces"
+								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"
+								onClick={() => setOpenMenu(!openMenu)}
+							>
+								El viatge de noces
+							</a>
+						</li>
+						<li>
+							<a
 								href="/#contacte"
 								title="Contacte"
 								className="text-white font-tenez italic py-2.5 block px-4 bg-primary-500 hover:bg-primary-400 transition-all duration-300 ease-in-out"

@@ -657,7 +657,7 @@ const Home = () => {
 
 				{/* Section viatge de noces */}
 				<section className="relative py-44 px-10 md:px-14 flex flex-wrap justify-center">
-					<span id="localitzacio" className="absolute -top-20"></span>
+					<span id="viatge" className="absolute -top-20"></span>
 					<div className="absolute inset-0 z-0">
 						<picture>
 							<source

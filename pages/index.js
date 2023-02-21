@@ -655,6 +655,112 @@ const Home = () => {
 					</div>
 				</section>
 
+				{/* Section viatge de noces */}
+				<section className="relative py-44 px-10 md:px-14 flex flex-wrap justify-center">
+					<span id="localitzacio" className="absolute -top-20"></span>
+					<div className="absolute inset-0 z-0">
+						<picture>
+							<source
+								srcSet="img/home/bg-sri-lanka-viatge-noces.webp"
+								type="image/webp"
+							/>
+							<img
+								src="img/home/bg-sri-lanka-viatge-noces.jpg"
+								alt="Viatge de noces a Sri Lanka"
+								className="w-full h-full object-cover"
+							/>
+						</picture>
+					</div>
+					<div className="p-6 md:p-14 bg-white relative z-10 w-full max-w-xl overflow-hidden">
+						<div className="relative z-10">
+							<h2 className="my-0 max-w-lg">
+								El nostre viatge de Lluna de mel!
+							</h2>
+							<p className="mt-3 text-black max-w-lg">
+								De totes les destinacions que hi ha al món, després de pensar-ho
+								detingudament, hem decidit que la nostra lluna de mel la volem
+								passar a Sri Lanka!
+							</p>
+							<p className="mt-3 text-sm normal-case text-gray-500 max-w-lg leading-normal">
+								Sri Lanka és una illa situada a l'Oceà Índic, al nord de
+								l'equador. A una banda hi trobem l'Índia i, a l'altre, l'estret
+								de Palk. El país té una superfície total de 65.610 Km² on
+								destaquen les seves platges de sorra blanca, els boscos
+								muntanyosos i camps de te i, una rica història i cultura per
+								conèixer.
+							</p>
+							<p className="mt-3 text-sm normal-case text-gray-500 max-w-lg leading-normal">
+								I per què ens escapem a Sri Lanka? Perquè aquesta bella illa
+								ofereix una gran combinació d'impressionants paisatges naturals,
+								una gran quantitat d'activitats per gaudir a l'aire lliure,
+								molts temples per descobrir, molts animals per observar i llocs
+								únics on relaxar-te mentre degustes la seva cuina tradicional.
+							</p>
+							<p className="mt-3 text-sm normal-case text-gray-500 max-w-lg leading-normal">
+								Gràcies per fer aquest somni realitat!
+							</p>
+
+							<picture className="inline-block mt-5">
+								<img
+									src="/signatura-andrea-juli.svg"
+									alt="Signature de l'Andrea i en Juli"
+									className="w-48 h-auto"
+									loading="lazy"
+								/>
+							</picture>
+
+							<div className="flex flex-wrap items-stretch mt-3 -m-2">
+								<div className="p-2 w-full md:w-1/2">
+									<a
+										href="/confirmar-assistencia"
+										title="Com arribar-hi"
+										className="button button__primary text-center inline-flex items-center w-full mt-3 md:mt-0 justify-center "
+										target="_blank"
+										rel="nofollow noreferrer"
+									>
+										<span className="inline-block -mb-px mr-2">
+											Confirmar assistència
+										</span>
+									</a>
+								</div>
+								<div className="p-2 w-full md:w-1/2">
+									<a
+										href="https://g.page/canalzina?share"
+										title="Com hi puc col·laborar?"
+										className="button button__primary--blue text-center inline-flex items-center w-full justify-center"
+										target="_blank"
+										rel="nofollow noreferrer"
+									>
+										<span className="inline-block -mb-px mr-2">
+											Com hi puc col·laborar?
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div className="absolute bottom-0 right-0 opacity-30 z-0 h-full">
+							<picture>
+								<img
+									src="img/home/flors-bottom-right.png"
+									alt=""
+									className="w-full h-full object-contain"
+									loading="lazy"
+								/>
+							</picture>
+						</div>
+						<div className="absolute inset-0 opacity-50 z-0">
+							<picture>
+								<img
+									src="white-paper-texture.jpg"
+									alt=""
+									className="w-full h-full object-cover"
+									loading="lazy"
+								/>
+							</picture>
+						</div>
+					</div>
+				</section>
+
 				{/* Section FAQs */}
 				<section className="relative flex flex-wrap items-stretch">
 					<span id="faqs" className="absolute -top-20"></span>

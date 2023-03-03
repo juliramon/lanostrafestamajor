@@ -725,7 +725,7 @@ const Home = () => {
 								</div>
 								<div className="p-2 w-full md:w-1/2">
 									<a
-										href="https://g.page/canalzina?share"
+										href="/#faqs"
 										title="Com hi puc col·laborar?"
 										className="button button__primary--blue text-center inline-flex items-center w-full justify-center"
 										target="_blank"

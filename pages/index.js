@@ -428,7 +428,7 @@ const Home = () => {
 						<div className="container relative z-20">
 							<h2 className="text-center max-w-xl mx-auto">
 								Els nuvis.
-								<br /> Una breu resum a tot el que ens ha portat fins a aquest
+								<br /> Un breu resum a tot el que ens ha portat fins a aquest
 								punt.
 							</h2>
 							<div className="mt-14">

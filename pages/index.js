@@ -728,8 +728,6 @@ const Home = () => {
 										href="/#faqs"
 										title="Com hi puc col·laborar?"
 										className="button button__primary--blue text-center inline-flex items-center w-full justify-center"
-										target="_blank"
-										rel="nofollow noreferrer"
 									>
 										<span className="inline-block -mb-px mr-2">
 											Com hi puc col·laborar?

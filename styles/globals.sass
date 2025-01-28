@@ -11,19 +11,24 @@
 // Vendors
 @import "vendors/tailwind"
 
-@font-face 
-	font-family: 'Tenez'
-	src: url('../fonts/Tenez-Regular.eot'),
-	src: url('../fonts/Tenez-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Tenez-Regular.woff2') format('woff2'), url('../fonts/Tenez-Regular.woff') format('woff'), url('../fonts/Tenez-Regular.ttf') format('truetype'),
+@font-face
+	font-family: 'Forever'
+	src: url('../fonts/Forever.woff2') format('woff2'), url('../fonts/Forever.woff') format('woff')
 	font-weight: 400
 	font-style: normal
 	font-display: swap
 
+@font-face
+	font-family: 'Romans-Story'
+	src: url('../fonts/Romans-Story.woff2') format('woff2'), url('../fonts/Romans-Story.woff') format('woff')
+	font-weight: 400
+	font-style: normal
+	font-display: swap
 
-@font-face 
-	font-family: 'Fonseca'
-	src: url('../fonts/Fonseca-Thin.otf'),
-	font-weight: 200
+@font-face
+	font-family: 'Urbanist'
+	src: url('../fonts/Urbanist.ttf') format('truetype-variations')
+	font-weight: 400
 	font-style: normal
 	font-display: swap
 
@@ -33,14 +38,19 @@
 		@apply scroll-smooth
 
 	body
+		color: theme('colors.secondary.500')
 		@apply font-fonseca
+
+	::selection
+		background-color: theme('colors.primary.500')
+		color: theme('colors.white')
 
 	h1, h2, h3, h4, h5, h6
 		@apply font-tenez
 
 	h1
 		font-size: clamp(40px, 4vw, 110px)
-		@apply leading-normal my-0
+		@apply leading-tight my-0
 		@screen lg
 			@apply leading-none
 
@@ -63,7 +73,7 @@
 			@apply leading-none
 
 	label, legend
-		@apply text-xs block mb-1 text-primary-500
+		@apply text-base block mb-1 text-primary-500
 
 	input, select, textarea
 		@apply border-b border-primary-300 text-lg text-black font-tenez block w-full resize-y

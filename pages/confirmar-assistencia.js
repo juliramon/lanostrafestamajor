@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import {useState} from "react";
 import Navbar from "../components/global/Navbar";
 import EmailService from "../services/emailService";
 import FormToast from "../components/toasts/FormToast";
@@ -34,14 +34,17 @@ const ConfirmarAssistencia = () => {
 				[e.target.name]: e.target.value,
 				foodAllergies: "",
 			});
-		} else if (e.target.name == "hasSpecialDiet" && e.target.value == "false") {
+		} else if (
+			e.target.name == "hasSpecialDiet" &&
+			e.target.value == "false"
+		) {
 			setFormData({
 				...formData,
 				[e.target.name]: e.target.value,
 				specialDiet: "",
 			});
 		} else {
-			setFormData({ ...formData, [e.target.name]: e.target.value });
+			setFormData({...formData, [e.target.name]: e.target.value});
 		}
 	};
 
@@ -76,9 +79,9 @@ const ConfirmarAssistencia = () => {
 				specialDiet
 			);
 		} else {
-			setAlertState({ ...alertState, isVisible: true });
+			setAlertState({...alertState, isVisible: true});
 			setTimeout(
-				() => setAlertState({ ...alertState, isVisible: false }),
+				() => setAlertState({...alertState, isVisible: false}),
 				5000
 			);
 		}
@@ -121,9 +124,13 @@ const ConfirmarAssistencia = () => {
 						serverMessage:
 							"Formulari enviat correctament! Moltes gràcies per confirmar assistència :)",
 					});
-					setToastState({ ...formData, isVisible: true, duration: 5000 });
+					setToastState({
+						...formData,
+						isVisible: true,
+						duration: 5000,
+					});
 					setTimeout(
-						() => setToastState({ ...toastState, isVisible: false }),
+						() => setToastState({...toastState, isVisible: false}),
 						8000
 					);
 				}
@@ -169,15 +176,19 @@ const ConfirmarAssistencia = () => {
 				<meta name="theme-color" content="#ffffff"></meta>
 				<link rel="mask-icon" href="favicon.svg" color="#ffffff"></link>
 				<link rel="icon" href="favicon.svg"></link>
-				<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></link>
-				<title>Confirmar assitència - Andrea & Juli</title>
+				<link
+					rel="shortcut icon"
+					href="favicon.ico"
+					type="image/x-icon"
+				></link>
+				<title>Confirmar assitència - Marta i Jordi</title>
 				<meta
 					name="description"
-					content="La gran escapada, la festa on l'Andrea i en Juli faran el gran pas! Us esperem a Ca n'Alzina, Rubió (Igualada)"
+					content="La nostra festa major, la festa on la Marta i en Jordi faran el gran pas! Us esperem a Mas Can Ferrer, Arbúcies, el 5 d'abril de 2025."
 				></meta>
 				<link
 					rel="canonical"
-					href="https://www.lagranescapada.cat/confirmar-assistencia"
+					href="https://www.lanostrafestamajor2025.cat/confirmar-assistencia"
 				></link>
 				<meta name="robots" content="Index,Follow"></meta>
 				<meta property="og:image" content="/share.jpg"></meta>
@@ -190,14 +201,15 @@ const ConfirmarAssistencia = () => {
 				<section className="flex flex-wrap items-stretch relative z-30 h-screen">
 					<div className="w-full relative flex flex-wrap items-center justify-center pt-48 lg:pb-32">
 						<div className="relative z-10 max-w-3xl mx-auto bg-white py-12 px-6 md:p-12">
-							<h1 className="text-3xl md:text-5xl md:text-center">
+							<h1 className="text-3xl md:text-5xl md:text-center text-primary-500">
 								Confirmar assistència
 							</h1>
-							<p className="mt-3 text-gray-500 md:text-center text-base md:text-lg leading-snug font-tenez">
-								Omple el formulari per confirmar la teva assistència al
-								casament.
+							<p className="mt-3 text-secondary-500 md:text-center text-base font-urbanist">
+								Omple el formulari per confirmar la teva
+								assistència al casament.
 								<br />
-								Envia tants formularis com persones vulguis confirmar.
+								Envia tants formularis com persones vulguis
+								confirmar.
 							</p>
 							{alertContainer}
 							<form
@@ -206,7 +218,8 @@ const ConfirmarAssistencia = () => {
 							>
 								<fieldset className="w-full lg:w-1/2 mb-8 px-4">
 									<label htmlFor="firstName">
-										Nom <span className="text-red-400">*</span>
+										Nom{" "}
+										<span className="text-red-400">*</span>
 									</label>
 									<input
 										type="text"
@@ -218,7 +231,8 @@ const ConfirmarAssistencia = () => {
 								</fieldset>
 								<fieldset className="w-full lg:w-1/2 mb-8 px-4">
 									<label htmlFor="surName">
-										Cognom <span className="text-red-400">*</span>
+										Cognom{" "}
+										<span className="text-red-400">*</span>
 									</label>
 									<input
 										type="text"
@@ -230,7 +244,8 @@ const ConfirmarAssistencia = () => {
 								</fieldset>
 								<fieldset className="w-full lg:w-1/2 mb-8 px-4">
 									<label htmlFor="phone">
-										Telèfon <span className="text-red-400">*</span>
+										Telèfon{" "}
+										<span className="text-red-400">*</span>
 									</label>
 									<input
 										type="phone"
@@ -242,7 +257,8 @@ const ConfirmarAssistencia = () => {
 								</fieldset>
 								<fieldset className="w-full lg:w-1/2 mb-8 px-4">
 									<label htmlFor="email">
-										Correu electrònic <span className="text-red-400">*</span>
+										Correu electrònic{" "}
+										<span className="text-red-400">*</span>
 									</label>
 									<input
 										type="email"
@@ -265,10 +281,16 @@ const ConfirmarAssistencia = () => {
 											value="false"
 											onChange={(e) => handleChange(e)}
 											defaultChecked={
-												formData.hasFoodAllergy == "false" ? true : false
+												formData.hasFoodAllergy ==
+												"false"
+													? true
+													: false
 											}
 										/>
-										<label htmlFor="allergy-0" className="mb-0">
+										<label
+											htmlFor="allergy-0"
+											className="mb-0"
+										>
 											No
 										</label>
 									</div>
@@ -281,10 +303,16 @@ const ConfirmarAssistencia = () => {
 											value="true"
 											onChange={(e) => handleChange(e)}
 											defaultChecked={
-												formData.hasFoodAllergy == "true" ? true : false
+												formData.hasFoodAllergy ==
+												"true"
+													? true
+													: false
 											}
 										/>
-										<label htmlFor="allergy-1" className="mb-0">
+										<label
+											htmlFor="allergy-1"
+											className="mb-0"
+										>
 											Sí
 										</label>
 									</div>
@@ -296,10 +324,14 @@ const ConfirmarAssistencia = () => {
 											: "opacity-100"
 									}`}
 									disabled={
-										formData.hasFoodAllergy == "false" ? "disabled" : ""
+										formData.hasFoodAllergy == "false"
+											? "disabled"
+											: ""
 									}
 								>
-									<label htmlFor="foodAllergies">Digue'ns quines</label>
+									<label htmlFor="foodAllergies">
+										Digue'ns quines
+									</label>
 									<textarea
 										placeholder="Ex. súlfits, glúten, etc."
 										name="foodAllergies"
@@ -320,10 +352,16 @@ const ConfirmarAssistencia = () => {
 											value="false"
 											onChange={(e) => handleChange(e)}
 											defaultChecked={
-												formData.hasSpecialDiet == "false" ? true : false
+												formData.hasSpecialDiet ==
+												"false"
+													? true
+													: false
 											}
 										/>
-										<label htmlFor="diet-0" className="mb-0">
+										<label
+											htmlFor="diet-0"
+											className="mb-0"
+										>
 											No
 										</label>
 									</div>
@@ -336,10 +374,16 @@ const ConfirmarAssistencia = () => {
 											value="true"
 											onChange={(e) => handleChange(e)}
 											defaultChecked={
-												formData.hasSpecialDiet == "true" ? true : false
+												formData.hasSpecialDiet ==
+												"true"
+													? true
+													: false
 											}
 										/>
-										<label htmlFor="diet-1" className="mb-0">
+										<label
+											htmlFor="diet-1"
+											className="mb-0"
+										>
 											Sí
 										</label>
 									</div>
@@ -351,10 +395,14 @@ const ConfirmarAssistencia = () => {
 											: "opacity-100"
 									}`}
 									disabled={
-										formData.hasSpecialDiet == "false" ? "disabled" : ""
+										formData.hasSpecialDiet == "false"
+											? "disabled"
+											: ""
 									}
 								>
-									<label htmlFor="specialDiet">Diga'ns quina</label>
+									<label htmlFor="specialDiet">
+										Diga'ns quina
+									</label>
 									<textarea
 										placeholder="Ex. vegetariana, vegana, etc."
 										name="specialDiet"

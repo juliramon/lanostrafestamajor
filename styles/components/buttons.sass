@@ -1,6 +1,6 @@
 @layer components
     .button
-        @apply inline-flex items-center px-5 py-4 uppercase text-11 rounded-sm tracking-wider
+        @apply inline-flex items-center px-5 py-4 text-sm rounded-sm
 
     .button__primary
         @apply border border-primary-500 bg-transparent transition-all duration-300 ease-in-out text-primary-500
@@ -10,7 +10,7 @@
 
         &--white
             @extend .button__primary
-            @apply bg-white text-primary-500 border-primary-200
+            @apply bg-white text-primary-500 border-primary-500
 
         &--blue
             @extend .button__primary

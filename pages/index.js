@@ -5,7 +5,7 @@ import Navbar from "../components/global/Navbar";
 import Accordion from "../components/accordions/Accordion";
 import Agenda from "../components/others/Agenda";
 import Counter from "../components/others/Counter";
-import { useState } from "react";
+import {useState} from "react";
 import PlaylistToast from "../components/toasts/PlaylistToast";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
 		{
 			title: "Hem de seguir algun codi de vestimenta?",
 			description:
-				"El codi de vestimenta del casament és entre còctel i formal, la qüestió és que vingueu ben elegants!",
+				"No hi ha cap codi de vestimenta. Ens agradaria que els/les nostres convidats/des vinguin còmodes per passar-ho d'allò més bé. Tingueu en compte que l'espai és de gespa, no aconsellem portar sabates amb taló fi. ",
 		},
 		{
 			title: "Heu fet llista de casament, o heu obert un compte?",
@@ -22,8 +22,7 @@ const Home = () => {
 		},
 		{
 			title: "Com es diu l'espai on es celebrarà el casament?",
-			description:
-				"L'espai on es celebrarà tant la cerimònia com el convit és Ca n'Alzina - Espai Gastronomia, i es troba situat a les afores del petit poble de Rubió (Igualada). És important no confondre el nom de l'espai amb el del poble de Ca n'Alzina; el correcte és el primer.",
+			description: "",
 		},
 		{
 			title: "Hem de confirmar assistència? Com podem fer-ho?",
@@ -44,32 +43,44 @@ const Home = () => {
 
 	const agenda = [
 		{
-			title: "La recepció",
-			description: "17:00 h - Arribada a Ca n'Alzina, ben puntuals",
+			icon: "",
+			title: "L'arribada",
+			description: "12:00 h - Arribada a Mas Can Ferrer, ben puntuals",
 		},
 		{
-			title: "La cerimònia",
-			description: "17:30 a 18:30 h - Un moment per recodar",
+			icon: "/icon-anells.svg",
+			title: "El pregó",
+			description: "La gran cerimònia dels núvis a càrrec d'Arnau Guardi",
 		},
 		{
-			title: "Les fotografies",
-			description: "18:30 a 19:00 h - Inmortalitzem el moment",
+			icon: "",
+			title: "Tret d'inici",
+			description: "Org. Càtering Montserrat i Mas Can Ferrer",
 		},
 		{
+			icon: "",
 			title: "L'aperitiu",
-			description: "19:00 a 20:30 h - Per anar escalfant motors",
+			description: "Concert vermut",
 		},
 		{
-			title: "El convit",
-			description: "20:30 a 23:30 h - Que no hi falti de res",
+			icon: "/icon-dinar.svg",
+			title: "Dinar de germanor",
+			description: "Org. Càtering Montserrat",
 		},
 		{
-			title: "La festa",
-			description: "23:30 h - Veurem sortir el sol?",
+			icon: "/icon-gegants.svg",
+			title: "El Ball dels Gegants",
+			description: "Org. Els Núvis",
+		},
+		{
+			icon: "/icon-ball.svg",
+			title: "La Nit Jove",
+			description: "A càrrec de Coneta So",
 		},
 	];
 
-	const [stateDeadline, setStateDeadline] = useState("April 01, 2023");
+	const [stateDeadline, setStateDeadline] = useState("April 05, 2025");
+	const [playlistVisible, setPlaylistVisible] = useState(false);
 
 	return (
 		<>
@@ -82,13 +93,20 @@ const Home = () => {
 				<meta name="theme-color" content="#ffffff"></meta>
 				<link rel="mask-icon" href="favicon.svg" color="#ffffff"></link>
 				<link rel="icon" href="favicon.svg"></link>
-				<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></link>
-				<title>01.04.2023</title>
+				<link
+					rel="shortcut icon"
+					href="favicon.ico"
+					type="image/x-icon"
+				></link>
+				<title>05.04.2025</title>
 				<meta
 					name="description"
-					content="La gran escapada, la festa on l'Andrea i en Juli faran el gran pas! Us esperem a Ca n'Alzina - Espai Gastronomia (Rubió)!"
+					content="La nostra festa major, la festa on la Marta i en Jordi faran el gran pas! Us esperem a Mas Can Ferrer, Arbúcies, el 5 d'abril de 2025."
 				></meta>
-				<link rel="canonical" href="https://www.lagranescapada.cat"></link>
+				<link
+					rel="canonical"
+					href="https://www.lanostrafestamajor2025.cat"
+				></link>
 				<meta name="robots" content="Index,Follow"></meta>
 				<meta property="og:image" content="/share.jpg"></meta>
 			</Head>
@@ -98,31 +116,43 @@ const Home = () => {
 
 			<main>
 				{/* Section cover */}
-				<section className="w-full h-screen relative z-10">
-					<div className="relative w-full h-full after:absolute after:inset-0 after:bg-gradient-to-b after:from-black after:to-transparent after:opacity-50">
-						<picture>
-							<img
-								src="img/home/cover-ca-nalzina.jpg"
-								alt=""
-								className="w-full h-screen object-cover"
-								loading="eager"
-								fetchpriority="high"
-							/>
-						</picture>
-					</div>
-					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:w-auto">
-						<div className="max-w-full md:max-w-lg mx-auto px-6 md:px-0">
-							<h1 className="text-white uppercase font-bold">
-								Benvinguts a la gran escapada.
-							</h1>
-							<p className="text-white mt-8">
-								<span className="inline-flex items-center after:w-5 after:h-px after:bg-white after:block after:ml-3 after:mr-2">
-									01 d'abril 2023
-								</span>{" "}
-								<span className="inline-flex">
-									Ca n’Alzina, Rubió (Igualada)
-								</span>
-							</p>
+				<section className="overflow-hidden w-full h-[90vh] relative z-20 before:absolute before:top-0 before:inset-x-0 before:h-60 before:bg-gradient-to-b before:from-black before:to-transparent before:opacity-50 before:z-10">
+					<picture className="absolute inset-0 w-full h-full z-0">
+						<img
+							src="/organic-texture.jpg"
+							alt=""
+							class="w-full h-full object-cover"
+							loading="eager"
+						/>
+					</picture>
+					<div className="container relative z-10 h-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 lg:items-center gap-x-2 md:gap-x-3 lg:gap-x-4">
+						<div className="col-span-4 md:col-span-6 lg:col-span-6">
+							<picture className="block -rotate-[5deg] lg:-rotate-[10deg] relative top-[20vh] lg:top-0 lg:-right-6 shadow-md max-w-md md:max-w-xl lg:max-w-full mx-auto">
+								<img
+									src="/home-cover-illustration.jpg"
+									alt=""
+									className="w-full h-auto"
+									loading="eager"
+								/>
+							</picture>
+						</div>
+						<div className="col-span-4 md:col-span-6 lg:col-span-6 relative z-10">
+							<div className="max-w-full md:max-w-4xl mx-auto text-center lg:text-left relative top-[4vh] md:top-0">
+								<h1 className="text-primary-500">
+									<span className="font-forever block lg:mb-4 text-4xl md:text-6xl">
+										Us convidem a la
+									</span>
+									<span>nostra festa major</span>
+								</h1>
+								<p className="text-primary-500 mt-4 md:mt-8">
+									<span className="inline-flex items-center after:w-5 after:h-px after:bg-primary-500 after:block after:ml-3 after:mr-2">
+										05 d'abril de 2025
+									</span>{" "}
+									<span className="inline-flex">
+										Mas Can Ferrer, Arbúcies
+									</span>
+								</p>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -130,15 +160,45 @@ const Home = () => {
 				{/* Section intro  */}
 				<section className="flex flex-wrap items-stretch relative z-30">
 					<span id="introduccio" className="absolute -top-20"></span>
-					<div className="w-full lg:w-8/12 relative lg:pt-48 lg:pb-32 flex flex-wrap items-center justify-center">
+					<div className="w-full lg:w-8/12 relative lg:pt-28 lg:pb-16 flex flex-wrap items-center justify-center">
 						<div className="relative z-10 max-w-lg mx-auto px-6 md:px-0 pt-10 pb-32">
-							<h2>
-								Després de 9 anys i moltes escapades junts, hem decidit que és
-								el moment de fer-ne una de grossa!
-							</h2>
-							<p className="mt-6 text-primary-400">
-								Ens fa molta il·lusió convidar-vos a formar part del nostre
-								casamenT. No hi podeu faltar!
+							<h2>La nostra història</h2>
+							<p className="mt-6">
+								Som en Jordi i la Marta, i{" "}
+								<strong>
+									la nostra història comença l'agost del 2019
+									a través d'una app de cites
+								</strong>
+								. Des de la tercera trobada vam tenir clar que
+								allò era especial, de fet, tot va anar tan ràpid
+								que en Jordi es va presentar a casa meva després
+								de només tres cites! El confinament ens va unir
+								encara més i ens va portar a prendre la decisió
+								de viure junts.
+							</p>
+							<p className="mt-6">
+								El febrer de 2021 vam començar{" "}
+								<strong>
+									una nova aventura al <i>pisito</i>
+								</strong>
+								, que es va convertir en el nostre refugi
+								després de reformar-lo amb molt d'amor. Des
+								d'aleshores, hem compartit viatges, aficions i
+								moments inoblidables. Hem visitat el Delta de
+								l'Ebre, Mallorca, la Toscana i l'Ametlla de Mar,
+								i hem gaudit d'activitats com esquiar, buscar
+								bolets, escapar-nos a Camprodon i, fins i tot,
+								portar gegants!
+							</p>
+							<p className="mt-6">
+								Així que{" "}
+								<strong>
+									el 5 proper d'abril de 2025 volem celebrar
+									aquest amor
+								</strong>{" "}
+								amb totes les persones que estimem. Prepareu-vos
+								per començar aquesta nova etapa amb nosaltres!
+								Que continuï la festa! 🎉
 							</p>
 							<a
 								href="/confirmar-assistencia"
@@ -194,7 +254,7 @@ const Home = () => {
 					<span id="localitzacio" className="absolute -top-20"></span>
 					<div className="absolute inset-0 z-0">
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.080506178645!2d1.5655592512061005!3d41.64038073659367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4411b4c26e683%3A0xdf9f2863d54d0a45!2sCa%20n&#39;Alzina%20-%20Espai%20Gastronomia!5e1!3m2!1sen!2ses!4v1665836717816!5m2!1sen!2ses"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.8449856185125!2d2.4740387999999998!3d41.841392500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb2b3c81079643%3A0x2a3d8db57a2964c6!2sMas%20Can%20Ferrer!5e1!3m2!1sca!2ses!4v1738004207089!5m2!1sca!2ses"
 							width="600"
 							height="450"
 							loading="lazy"
@@ -205,23 +265,24 @@ const Home = () => {
 					<div className="p-6 md:p-14 bg-white relative z-10 w-full lg:w-5/12 overflow-hidden">
 						<div className="relative z-10">
 							<h2 className="my-0 max-w-lg">
-								Ens veiem el proper <br /> dissabte 01 d'abril de 2023 a les
-								17:00h a Ca N'alzina, Rubió (Igualada).
+								Ens veiem el proper <br /> dissabte 05 d'abril
+								de 2025 a les 12:00h a Mas Can Ferrer, Arbúcies.
 							</h2>
-							<p className="mt-3 text-primary-400 max-w-lg">
-								En cas de dubtes sobre com arribar a Ca N'Alzina, ens podeu fer
-								un truc al{" "}
+							<p className="mt-3 max-w-lg">
+								En cas de dubtes sobre com arribar a Mas Can
+								Ferrer, ens podeu fer un truc al{" "}
 								<a
-									href="tel:+34626138170"
-									title="+34 626 138 170"
+									href="tel:+34678124694
+"
+									title="+34678124694"
 									className="underline hover:text-primary-500 transition-all duration-300 ease-in-out"
 								>
-									+34 626 138 170
+									+34 678 124 694
 								</a>
 							</p>
 							<div className="flex flex-wrap items-stretch mt-8">
 								<a
-									href="https://g.page/canalzina?share"
+									href="https://maps.app.goo.gl/V6EYPXiR2LMe1M3m7"
 									title="Com arribar-hi"
 									className="button button__primary inline-flex items-center w-full md:w-auto justify-center"
 									target="_blank"
@@ -241,7 +302,11 @@ const Home = () => {
 										strokeLinecap="round"
 										strokeLinejoin="round"
 									>
-										<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+										<path
+											stroke="none"
+											d="M0 0h24v24H0z"
+											fill="none"
+										></path>
 										<path d="M8 21h4"></path>
 										<path d="M10 21v-10"></path>
 										<path d="M10 6v-3"></path>
@@ -301,8 +366,8 @@ const Home = () => {
 						<div className="w-full lg:h-1/2">
 							<picture>
 								<img
-									src="img/home/ca-nalzina-agenda-2.jpg"
-									data-src="img/home/ca-nalzina-agenda-2.jpg"
+									src="img/home/mas-can-ferrer-agenda-1.jpg"
+									data-src="img/home/mas-can-ferrer-agenda-1.jpg"
 									className="w-full h-full object-cover"
 								></img>
 							</picture>
@@ -310,8 +375,8 @@ const Home = () => {
 						<div className="w-full lg:h-1/2">
 							<picture>
 								<img
-									src="img/home/ca-nalzina-agenda-1.jpg"
-									data-src="img/home/ca-nalzina-agenda-1.jpg"
+									src="img/home/mas-can-ferrer-agenda-3.jpg"
+									data-src="img/home/mas-can-ferrer-agenda-3.jpg"
 									className="w-full h-full object-cover"
 								></img>
 							</picture>
@@ -329,15 +394,18 @@ const Home = () => {
 							</picture>
 						</div>
 						<div className="relative z-10 max-w-2xl mx-auto">
-							<h2 className="max-w-lg">
-								Que a quina hora heu de ser-hi, o què hi farem a Ca n'Alzina?
-								Aquesta és l'agenda del dia; feu-li un cop d'ull.
-							</h2>
+							<h2 className="max-w-lg">El programa</h2>
+							<p className="mt-3 max-w-lg">
+								Que a quina hora heu de ser-hi, o què hi farem a
+								Mas Can Ferrer? Aquesta és l'agenda del dia;
+								feu-li un cop d'ull.
+							</p>
 							<div className="relative">
 								<ul className="mt-8 md:mt-12 relative z-20">
 									{agenda.map((item, idx) => (
 										<Agenda
 											key={idx}
+											icon={item.icon}
 											title={item.title}
 											description={item.description}
 										/>
@@ -428,8 +496,8 @@ const Home = () => {
 						<div className="container relative z-20">
 							<h2 className="text-center max-w-xl mx-auto">
 								Els nuvis.
-								<br /> Un breu resum a tot el que ens ha portat fins a aquest
-								punt.
+								<br /> Un breu resum a tot el que ens ha portat
+								fins a aquest punt.
 							</h2>
 							<div className="mt-14">
 								<div className="flex flex-wrap justify-center relative">
@@ -447,7 +515,8 @@ const Home = () => {
 												Andrea Prat, la núvia
 											</h3>
 											<span className="text-sm text-gray-500 max-w-xs inline-block">
-												Molt fan d'il·lustrar i de qualsevol esport que l'hi
+												Molt fan d'il·lustrar i de
+												qualsevol esport que l'hi
 												proposis
 											</span>
 										</div>
@@ -466,7 +535,8 @@ const Home = () => {
 												Juli Ramon, el nuvi
 											</h3>
 											<span className="text-sm text-gray-500 max-w-xs inline-block">
-												Molt fan de picar codi i de dormir fins ben tard (si
+												Molt fan de picar codi i de
+												dormir fins ben tard (si
 												l'Andrea l'hi permet)
 											</span>
 										</div>
@@ -487,8 +557,9 @@ const Home = () => {
 												22 de maig, 2013
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Ens coneixem a <u>sala Bikini</u> en una nit que cap
-												dels dos oblidarà
+												Ens coneixem a{" "}
+												<u>sala Bikini</u> en una nit
+												que cap dels dos oblidarà
 											</span>
 										</div>
 									</div>
@@ -506,7 +577,8 @@ const Home = () => {
 												26 d'octubre, 2013
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Comencem a sortir junts, sembla que la cosa promet
+												Comencem a sortir junts, sembla
+												que la cosa promet
 											</span>
 										</div>
 									</div>
@@ -528,9 +600,12 @@ const Home = () => {
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
 												Primer viatge junts, de molts{" "}
 												<span className="opacity-40 block">
-													(Venècia, Sardenya, Suècia, Menorca, Beijing i Tai'an
-													(Xina), Ginebra, Madeira, París, Helsinki i Ivalo
-													(Finlàndia), Shangai i Wuxi (Xina), Àustria, Mallorca,
+													(Venècia, Sardenya, Suècia,
+													Menorca, Beijing i Tai'an
+													(Xina), Ginebra, Madeira,
+													París, Helsinki i Ivalo
+													(Finlàndia), Shangai i Wuxi
+													(Xina), Àustria, Mallorca,
 													País Basc, Madrid, Bèlgica
 												</span>
 											</span>
@@ -550,8 +625,10 @@ const Home = () => {
 												22 agost, 2017
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Ens proposem anar a viure junts. De moment ens conformem
-												amb un pis més petit que el Castell Disney
+												Ens proposem anar a viure junts.
+												De moment ens conformem amb un
+												pis més petit que el Castell
+												Disney
 											</span>
 										</div>
 									</div>
@@ -571,8 +648,9 @@ const Home = () => {
 												25 agost, 2019
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Apareix en Bru a les nostres vides, el nostre secretari
-												i company d'escapades
+												Apareix en Bru a les nostres
+												vides, el nostre secretari i
+												company d'escapades
 											</span>
 										</div>
 									</div>
@@ -590,8 +668,10 @@ const Home = () => {
 												25 maig 2020
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Finalment, després de dos anys d'obres, el covid i molts
-												aprenentatges, anem a viure junts
+												Finalment, després de dos anys
+												d'obres, el covid i molts
+												aprenentatges, anem a viure
+												junts
 											</span>
 										</div>
 									</div>
@@ -611,9 +691,10 @@ const Home = () => {
 												29 gener 2022
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Després de vuit anys i una mica més, en Juli es decideix
-												a fer la gran pregunta, i l'Andrea diu que sí. Ens
-												prometem!
+												Després de vuit anys i una mica
+												més, en Juli es decideix a fer
+												la gran pregunta, i l'Andrea diu
+												que sí. Ens prometem!
 											</span>
 										</div>
 									</div>
@@ -656,7 +737,7 @@ const Home = () => {
 				</section>
 
 				{/* Section viatge de noces */}
-				<section className="relative py-44 px-10 md:px-14 flex flex-wrap justify-center">
+				{/* <section className="relative py-44 px-10 md:px-14 flex flex-wrap justify-center">
 					<span id="viatge" className="absolute top-8"></span>
 					<div className="absolute inset-0 z-0">
 						<picture>
@@ -677,24 +758,28 @@ const Home = () => {
 								El nostre viatge de Lluna de mel!
 							</h2>
 							<p className="mt-3 text-black max-w-lg">
-								De totes les destinacions que hi ha al món, després de pensar-ho
-								detingudament, hem decidit que la nostra lluna de mel la volem
-								passar a Sri Lanka!
+								De totes les destinacions que hi ha al món,
+								després de pensar-ho detingudament, hem decidit
+								que la nostra lluna de mel la volem passar a Sri
+								Lanka!
 							</p>
 							<p className="mt-3 text-sm normal-case text-gray-500 max-w-lg leading-normal">
-								Sri Lanka és una illa situada a l'Oceà Índic, al nord de
-								l'equador. A una banda hi trobem l'Índia i, a l'altre, l'estret
-								de Palk. El país té una superfície total de 65.610 Km² on
-								destaquen les seves platges de sorra blanca, els boscos
-								muntanyosos i camps de te i, una rica història i cultura per
-								conèixer.
+								Sri Lanka és una illa situada a l'Oceà Índic, al
+								nord de l'equador. A una banda hi trobem l'Índia
+								i, a l'altre, l'estret de Palk. El país té una
+								superfície total de 65.610 Km² on destaquen les
+								seves platges de sorra blanca, els boscos
+								muntanyosos i camps de te i, una rica història i
+								cultura per conèixer.
 							</p>
 							<p className="mt-3 text-sm normal-case text-gray-500 max-w-lg leading-normal">
-								I per què ens escapem a Sri Lanka? Perquè aquesta bella illa
-								ofereix una gran combinació d'impressionants paisatges naturals,
-								una gran quantitat d'activitats per gaudir a l'aire lliure,
-								molts temples per descobrir, molts animals per observar i llocs
-								únics on relaxar-te mentre degustes la seva cuina tradicional.
+								I per què ens escapem a Sri Lanka? Perquè
+								aquesta bella illa ofereix una gran combinació
+								d'impressionants paisatges naturals, una gran
+								quantitat d'activitats per gaudir a l'aire
+								lliure, molts temples per descobrir, molts
+								animals per observar i llocs únics on relaxar-te
+								mentre degustes la seva cuina tradicional.
 							</p>
 							<p className="mt-3 text-sm normal-case text-gray-500 max-w-lg leading-normal">
 								Gràcies per fer aquest somni realitat!
@@ -757,7 +842,7 @@ const Home = () => {
 							</picture>
 						</div>
 					</div>
-				</section>
+				</section> */}
 
 				{/* Section FAQs */}
 				<section className="relative flex flex-wrap items-stretch">
@@ -765,8 +850,8 @@ const Home = () => {
 					<div className="w-full lg:w-8/12 relative lg:pt-56 lg:pb-32 flex flex-wrap items-center justify-center order-2 md:order-none">
 						<div className="relative z-10 max-w-2xl mx-auto py-12 px-6 md:px-0">
 							<h2 className="max-w-lg">
-								Preguntes i respostes freqüents que, potser, us ajuden a fer
-								l'espera més lleugera.
+								Preguntes i respostes freqüents que, potser, us
+								ajuden a fer l'espera més lleugera.
 							</h2>
 							<div className="accordion mt-12">
 								{faqs.map((faq, idx) => (
@@ -803,8 +888,8 @@ const Home = () => {
 						<div className="w-full lg:h-1/2">
 							<picture>
 								<img
-									src="img/home/ca-nalzina-agenda-2.jpg"
-									data-src="img/home/ca-nalzina-agenda-2.jpg"
+									src="img/home/mas-can-ferrer-agenda-3.jpg"
+									data-src="img/home/mas-can-ferrer-agenda-3.jpg"
 									className="w-full h-full object-cover"
 								></img>
 							</picture>
@@ -812,8 +897,8 @@ const Home = () => {
 						<div className="w-full lg:h-1/2">
 							<picture>
 								<img
-									src="img/home/ca-nalzina-agenda-1.jpg"
-									data-src="img/home/ca-nalzina-agenda-1.jpg"
+									src="img/home/mas-can-ferrer-agenda-1.jpg"
+									data-src="img/home/mas-can-ferrer-agenda-1.jpg"
 									className="w-full h-full object-cover"
 								></img>
 							</picture>
@@ -840,17 +925,18 @@ const Home = () => {
 										Seguiu tenint dubtes? Contacteu-nos.
 									</h2>
 									<p className="mt-4 md:mt-6 text-zinc-300">
-										Si en aquest punt seguiu teniu dubtes o preguntes que no us
-										hem resolt, no dubteu en contactar-nos pels canals que
-										trobareu a continuació. Estarem més que encantats
-										d'ajudar-vos.
+										Si en aquest punt seguiu teniu dubtes o
+										preguntes que no us hem resolt, no
+										dubteu en contactar-nos pels canals que
+										trobareu a continuació. Estarem més que
+										encantats d'ajudar-vos.
 									</p>
 								</div>
 								<ul className="list-none m-0 px-6 w-full lg:w-1/3 mt-8 md:mt-0">
 									<li className="mb-2.5">
-										<h3 className="normal-case text-3xl text-zinc-200">
+										<h3 className="normal-case text-2xl text-zinc-200">
 											<a
-												href="tel:+34626138170"
+												href="tel:+34678124694"
 												title="Contacta'ns per Whatsapp"
 												className="flex items-center"
 											>
@@ -879,9 +965,9 @@ const Home = () => {
 										</h3>
 									</li>
 									<li className="mb-2.5">
-										<h3 className="normal-case text-3xl text-zinc-50">
+										<h3 className="normal-case text-2xl text-zinc-50">
 											<a
-												href="tel:+34626138170"
+												href="tel:+34678124694"
 												title="Contacta'ns per telèfon"
 												className="flex items-center"
 											>
@@ -909,9 +995,9 @@ const Home = () => {
 										</h3>
 									</li>
 									<li>
-										<h3 className="normal-case text-3xl text-zinc-50">
+										<h3 className="normal-case text-2xl text-zinc-50">
 											<a
-												href="mailto:lagranescapada@gmail.com"
+												href="mailto:jordifh93@hotmail.es"
 												title="Contacta'ns per correu electrònic"
 												className="flex items-center relative"
 											>
@@ -962,7 +1048,7 @@ const Home = () => {
 				</section>
 			</main>
 
-			<PlaylistToast />
+			{playlistVisible ? <PlaylistToast /> : null}
 		</>
 	);
 };

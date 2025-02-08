@@ -235,7 +235,7 @@ const Home = () => {
 							<picture>
 								<img
 									src="img/home/compo-nuvis-intro.png"
-									className="w-auto h-auto max-h-[450px] mr-0 ml-auto xl:m-0 xl:max-h-full lg:h-[40rem] rotate-6"
+									className="w-auto h-auto max-h-[450px] mr-0 ml-auto xl:m-0 xl:max-h-full lg:h-[40rem] rotate-6 relative right-[22px] lg:right-[32px]"
 								/>
 							</picture>
 						</div>

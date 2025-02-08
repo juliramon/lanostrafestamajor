@@ -231,7 +231,7 @@ const Home = () => {
 						</picture>
 					</div>
 					<div className="w-full lg:w-4/12 relative z-30">
-						<div className="absolute inset-x-0 top-[-28rem] lg:-left-44 lg:top-44 z-10">
+						<div className="absolute inset-x-0 top-[-26rem] lg:-left-44 lg:top-44 z-10 pointer-events-none">
 							<picture>
 								<img
 									src="img/home/compo-nuvis-intro.png"

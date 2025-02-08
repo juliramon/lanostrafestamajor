@@ -18,11 +18,12 @@ const Home = () => {
 		{
 			title: "Heu fet llista de casament, o heu obert un compte?",
 			description:
-				"La vostra presència serà el millor regal, però si tot i així voleu fer-nos un obsequi, agraïrem molt la vostra aportació al número de compte que hem habilitat: ES28 2100 3973 9202 0041 7262 per ajudar-nos a fer del viatge de noces un moment per recordar.",
+				"No hem fet llista de casament, i tampoc hem obert un compte. Per nosaltres el millor regal és que vingueu i gaudiu del dia.",
 		},
 		{
 			title: "Com es diu l'espai on es celebrarà el casament?",
-			description: "",
+			description:
+				"La nostra festa major es celebrarà a Mas Can Ferrer, a Arbúcies.",
 		},
 		{
 			title: "Hem de confirmar assistència? Com podem fer-ho?",
@@ -37,7 +38,7 @@ const Home = () => {
 		{
 			title: "Si tenim més dubtes, com us podem contactar?",
 			description:
-				"Podeu contactar amb nosaltres per telèfon o per correu electrònic a lagranescapada2023@gmail.com",
+				"Podeu contactar amb nosaltres per telèfon o per correu electrònic a jordifh93@hotmail.es",
 		},
 	];
 
@@ -142,7 +143,7 @@ const Home = () => {
 									<span className="font-forever block lg:mb-4 text-4xl md:text-6xl">
 										Us convidem a la
 									</span>
-									<span>nostra festa major</span>
+									<span>nOstra festa majOr</span>
 								</h1>
 								<p className="text-primary-500 mt-4 md:mt-8">
 									<span className="inline-flex items-center after:w-5 after:h-px after:bg-primary-500 after:block after:ml-3 after:mr-2">
@@ -160,7 +161,7 @@ const Home = () => {
 				{/* Section intro  */}
 				<section className="flex flex-wrap items-stretch relative z-30">
 					<span id="introduccio" className="absolute -top-20"></span>
-					<div className="w-full lg:w-8/12 relative lg:pt-28 lg:pb-16 flex flex-wrap items-center justify-center">
+					<div className="w-full lg:w-8/12 relative pb-52 lg:pt-28 lg:pb-16 flex flex-wrap items-center justify-center rlative z-20">
 						<div className="relative z-10 max-w-lg mx-auto px-6 md:px-0 pt-10 pb-32">
 							<h2>La nostra història</h2>
 							<p className="mt-6">
@@ -208,44 +209,36 @@ const Home = () => {
 								Confirmar assistència
 							</a>
 						</div>
-						<div className="absolute top-0 left-0 max-w-sm z-0">
-							<picture>
-								<img
-									src="img/home/flors-top-left.png"
-									alt=""
-									className="w-auto h-auto"
-									loading="lazy"
-								/>
-							</picture>
-						</div>
-						<div className="absolute inset-0 z-0">
-							<picture>
-								<img
-									src="white-paper-texture.jpg"
-									alt=""
-									className="w-full h-full object-cover opacity-40"
-									loading="lazy"
-								/>
-							</picture>
-						</div>
 					</div>
-					<div className="w-full lg:w-4/12 relative z-30">
-						<iv className="absolute right-10 md:right-auto md:-left-12 -top-56 md:-top-5 z-10">
-							<picture>
-								<img
-									src="img/home/andrea-juli-frame.png"
-									className="w-24 md:w-56 h-auto rotate-6 shadow-xl"
-								/>
-							</picture>
-						</iv>
+					<div className="absolute inset-0 z-10">
 						<picture>
 							<img
-								src="img/home/flors-right.png"
+								src="bg-texture-olive.jpg"
 								alt=""
-								className="w-full h-full object-cover absolute"
+								className="w-full h-full object-cover opacity-20"
 								loading="lazy"
 							/>
 						</picture>
+					</div>
+					<div className="absolute inset-0 z-0">
+						<picture>
+							<img
+								src="white-paper-texture.jpg"
+								alt=""
+								className="w-full h-full object-cover opacity-20"
+								loading="lazy"
+							/>
+						</picture>
+					</div>
+					<div className="w-full lg:w-4/12 relative z-30">
+						<div className="absolute inset-x-0 top-[-28rem] lg:-left-44 lg:top-44 z-10">
+							<picture>
+								<img
+									src="img/home/compo-nuvis-intro.png"
+									className="w-auto h-auto max-h-[450px] mr-0 ml-auto xl:m-0 xl:max-h-full lg:h-[40rem] rotate-6"
+								/>
+							</picture>
+						</div>
 					</div>
 				</section>
 
@@ -393,6 +386,16 @@ const Home = () => {
 								/>
 							</picture>
 						</div>
+						<div className="absolute inset-0 opacity-50 z-0">
+							<picture>
+								<img
+									src="bg-texture-olive-2.jpg"
+									alt=""
+									className="w-full h-full object-cover opacity-40"
+									loading="lazy"
+								/>
+							</picture>
+						</div>
 						<div className="relative z-10 max-w-2xl mx-auto">
 							<h2 className="max-w-lg">El programa</h2>
 							<p className="mt-3 max-w-lg">
@@ -420,30 +423,6 @@ const Home = () => {
 										Confirmar assistència
 									</a>
 								</div>
-								<div className="absolute -top-20 -right-36 z-10 opacity-30 rotate-12">
-									<picture>
-										<img
-											src="img/home/flors-vertical-olive.png"
-											alt=""
-											className="h-72"
-											width=""
-											height=""
-											loading="lazy"
-										/>
-									</picture>
-								</div>
-								<div className="absolute top-0 -left-36 z-10 opacity-30 rotate-12">
-									<picture>
-										<img
-											src="img/home/flors-33.png"
-											alt=""
-											className="h-96"
-											width=""
-											height=""
-											loading="lazy"
-										/>
-									</picture>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -465,26 +444,6 @@ const Home = () => {
 										/>
 									</picture>
 								</div>
-								<div className="absolute top-0 left-0 opacity-20 h-full z-10">
-									<picture>
-										<img
-											src="img/home/flors-countdown.png"
-											alt=""
-											className="w-auto h-full object-contain"
-											loading="lazy"
-										/>
-									</picture>
-								</div>
-								<div className="absolute top-0 right-0 opacity-20 h-full z-10">
-									<picture>
-										<img
-											src="img/home/flors-countdown-right.png"
-											alt=""
-											className="w-auto h-full object-contain"
-											loading="lazy"
-										/>
-									</picture>
-								</div>
 								<Counter deadline={stateDeadline} />
 							</div>
 						</div>
@@ -492,7 +451,7 @@ const Home = () => {
 
 					<span id="nuvis" className="absolute -top-20"></span>
 
-					<div className="relative pt-64 pb-32 overflow-hidden z-20">
+					<div className="relative py-36 md:pt-64 md:pb-32 overflow-hidden z-20">
 						<div className="container relative z-20">
 							<h2 className="text-center max-w-xl mx-auto">
 								Els nuvis.
@@ -501,238 +460,135 @@ const Home = () => {
 							</h2>
 							<div className="mt-14">
 								<div className="flex flex-wrap justify-center relative">
-									<div className="px-14 rotate-3 relative z-10">
+									<div className="rotate-3 relative z-10">
 										<picture>
 											<img
-												src="img/andrea-juli-timeline-nuvia.png"
-												alt="Andrea Prat, la núvia"
-												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												src="img/timeline-foto-nuvia.png"
+												alt="Marta Font, la núvia"
+												className="w-full md:w-72 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
-										<div className="mt-3 text-center">
+										<div className="text-center">
 											<h3 className="text-lg text-center text-black">
-												Andrea Prat, la núvia
+												Marta Font, la núvia
 											</h3>
 											<span className="text-sm text-gray-500 max-w-xs inline-block">
-												Molt fan d'il·lustrar i de
-												qualsevol esport que l'hi
-												proposis
+												Sempre de la banda dels vermells
+												i a punt per demostrar-ho a cada
+												prova
 											</span>
 										</div>
 									</div>
-									<div className="px-14 -rotate-6 mt-14 lg:mt-0">
+									<div className="-rotate-6 mt-14 lg:mt-0">
 										<picture>
 											<img
-												src="img/andrea-juli-timeline-nuvi.png"
-												alt="Juli Ramon, el nuvi"
-												className="shadow-xl w-full md:w-64 h-auto mx-auto"
+												src="img/timeline-foto-nuvi.png"
+												alt="Jordi Farrerons, el nuvi"
+												className="w-full md:w-72 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
-										<div className="mt-3 text-center">
+										<div className="text-center">
 											<h3 className="text-lg text-center text-black">
-												Juli Ramon, el nuvi
+												Jordi Farrerons, el nuvi
 											</h3>
 											<span className="text-sm text-gray-500 max-w-xs inline-block">
-												Molt fan de picar codi i de
-												dormir fins ben tard (si
-												l'Andrea l'hi permet)
+												Sempre al peu del canó a les
+												festes del poble i a les
+												trobades geganteres
 											</span>
 										</div>
 									</div>
 								</div>
 								<div className="flex flex-wrap justify-center mt-16 md:mt-0">
-									<div className="px-4 rotate-6 flex flex-col justify-center relative md:-left-12">
+									<div className="rotate-6 flex flex-col justify-center relative md:-left-12">
 										<picture>
 											<img
-												src="img/andrea-juli-timeline-01.png"
-												alt="22 de maig, 2013"
-												className="shadow-xl w-52 h-auto mx-auto"
-												loading="lazy"
-											/>
-										</picture>
-										<div className="mt-5 text-center">
-											<span className="text-sm text-gray-500">
-												22 de maig, 2013
-											</span>
-											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Ens coneixem a{" "}
-												<u>sala Bikini</u> en una nit
-												que cap dels dos oblidarà
-											</span>
-										</div>
-									</div>
-									<div className="px-4 -rotate-6 flex flex-col justify-center relative md:-right-12 mt-14 md:mt-20">
-										<picture>
-											<img
-												src="img/andrea-juli-timeline-02.png"
-												alt="26 d'octubre, 2013"
-												className="shadow-xl w-52 h-auto mx-auto"
-												loading="lazy"
-											/>
-										</picture>
-										<div className="mt-5 text-center">
-											<span className="text-sm text-gray-500">
-												26 d'octubre, 2013
-											</span>
-											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Comencem a sortir junts, sembla
-												que la cosa promet
-											</span>
-										</div>
-									</div>
-								</div>
-								<div className="flex flex-wrap justify-center mt-12 md:mt-0">
-									<div className="px-4 rotate-6 flex flex-col justify-center relative md:-left-12">
-										<picture>
-											<img
-												src="img/andrea-juli-timeline-03.png"
-												alt="15 maig 2015"
-												className="shadow-xl w-52 h-auto mx-auto"
-												loading="lazy"
-											/>
-										</picture>
-										<div className="mt-5 text-center">
-											<span className="text-sm text-gray-500">
-												15 maig 2015
-											</span>
-											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Primer viatge junts, de molts{" "}
-												<span className="opacity-40 block">
-													(Venècia, Sardenya, Suècia,
-													Menorca, Beijing i Tai'an
-													(Xina), Ginebra, Madeira,
-													París, Helsinki i Ivalo
-													(Finlàndia), Shangai i Wuxi
-													(Xina), Àustria, Mallorca,
-													País Basc, Madrid, Bèlgica
-												</span>
-											</span>
-										</div>
-									</div>
-									<div className="px-4 -rotate-5 flex flex-col justify-center relative md:-right-12 mt-20">
-										<picture>
-											<img
-												src="img/andrea-juli-timeline-04.png"
-												alt="22 agost, 2017"
-												className="shadow-xl w-52 h-auto mx-auto"
-												loading="lazy"
-											/>
-										</picture>
-										<div className="mt-5 text-center">
-											<span className="text-sm text-gray-500">
-												22 agost, 2017
-											</span>
-											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Ens proposem anar a viure junts.
-												De moment ens conformem amb un
-												pis més petit que el Castell
-												Disney
-											</span>
-										</div>
-									</div>
-								</div>
-								<div className="flex flex-wrap justify-center mt-12 md:mt-0">
-									<div className="px-4 rotate-12 flex flex-col justify-center relative md:-left-12">
-										<picture>
-											<img
-												src="img/andrea-juli-timeline-05.png"
-												alt="25 agost, 2019"
-												className="shadow-xl w-52 h-auto mx-auto"
-												loading="lazy"
-											/>
-										</picture>
-										<div className="mt-5 text-center">
-											<span className="text-sm text-gray-500">
-												25 agost, 2019
-											</span>
-											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Apareix en Bru a les nostres
-												vides, el nostre secretari i
-												company d'escapades
-											</span>
-										</div>
-									</div>
-									<div className="px-4 -rotate-3 flex flex-col justify-center relative md:-right-12 mt-20">
-										<picture>
-											<img
-												src="img/andrea-juli-timeline-06.png"
-												alt="25 maig 2020"
-												className="shadow-xl w-52 h-auto mx-auto -rotate-90"
+												src="img/timeline-foto-01.png"
+												alt="Agost del 2019"
+												className="w-full md:w-72 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
 										<div className="text-center">
 											<span className="text-sm text-gray-500">
-												25 maig 2020
+												Agost del 2019
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Finalment, després de dos anys
-												d'obres, el covid i molts
-												aprenentatges, anem a viure
-												junts
+												En Jordi es presenta a casa la
+												Marta al cap de només 3 cites.
+												La cosa promet.
+											</span>
+										</div>
+									</div>
+									<div className="-rotate-6 flex flex-col justify-center relative md:-right-12 mt-14 md:mt-20">
+										<picture>
+											<img
+												src="img/timeline-foto-02.png"
+												alt="Febrer del 2021"
+												className="w-full md:w-72 h-auto mx-auto"
+												loading="lazy"
+											/>
+										</picture>
+										<div className="text-center">
+											<span className="text-sm text-gray-500">
+												Febrer del 2021
+											</span>
+											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
+												El confinament ens ha unit
+												encara més, així que comencem
+												una nova aventura anant a viure
+												junts al pisito!
 											</span>
 										</div>
 									</div>
 								</div>
+
 								<div className="flex flex-wrap justify-center mt-10">
-									<div className="px-4 rotate-2 flex flex-col justify-center">
+									<div className="rotate-2 flex flex-col justify-center">
 										<picture>
 											<img
-												src="img/andrea-juli-timeline-07.png"
-												alt="29 gener 2022"
-												className="shadow-xl w-52 h-auto mx-auto"
+												src="img/timeline-foto-03.png"
+												alt="Abril del 2025"
+												className="w-full md:w-72 h-auto mx-auto"
 												loading="lazy"
 											/>
 										</picture>
-										<div className="mt-5 text-center">
+										<div className="text-center">
 											<span className="text-sm text-gray-500">
-												29 gener 2022
+												Abril del 2025
 											</span>
 											<span className="block mt-1 text-sm text-center normal-case text-black max-w-xs mx-auto">
-												Després de vuit anys i una mica
-												més, en Juli es decideix a fer
-												la gran pregunta, i l'Andrea diu
-												que sí. Ens prometem!
+												Us esperem el pròxim 5 d'abril
+												de 2025 per celebrar el nostre
+												amor a la nostra festa major!
 											</span>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<picture>
-							<img
-								src="img/home/flors-vertical-olive.png"
-								alt=""
-								className="object-cover absolute top-1/4 left-0 w-auto h-auto opacity-25"
-								loading="lazy"
-							/>
-						</picture>
-						<picture>
-							<img
-								src="img/home/flors-vertical-olive.png"
-								alt=""
-								className="object-cover absolute bottom-0 right-0 w-auto h-auto opacity-25 rotate-180"
-								loading="lazy"
-							/>
-						</picture>
-						<picture>
-							<img
-								src="img/home/flors-countdown-right.png"
-								alt=""
-								className="object-cover absolute -top-10 left-1/2 -translate-x-1/2 w-auto h-auto"
-								loading="lazy"
-							/>
-						</picture>
-						<picture>
-							<img
-								src="white-paper-texture.jpg"
-								alt=""
-								className="object-cover absolute inset-0 w-full h-full opacity-30"
-								loading="lazy"
-							/>
-						</picture>
+						<div className="absolute inset-0 z-10">
+							<picture>
+								<img
+									src="bg-texture-olive.jpg"
+									alt=""
+									className="w-full h-full object-cover opacity-20"
+									loading="lazy"
+								/>
+							</picture>
+						</div>
+						<div className="absolute inset-0 z-0">
+							<picture>
+								<img
+									src="white-paper-texture.jpg"
+									alt=""
+									className="w-full h-full object-cover opacity-20"
+									loading="lazy"
+								/>
+							</picture>
+						</div>
 					</div>
 				</section>
 
@@ -863,12 +719,12 @@ const Home = () => {
 								))}
 							</div>
 						</div>
-						<div className="absolute top-0 left-0 max-w-sm z-0">
+						<div className="absolute inset-0 z-0">
 							<picture>
 								<img
-									src="img/home/flors-top-left.png"
+									src="bg-texture-olive-2.jpg"
 									alt=""
-									className="w-auto h-auto"
+									className="w-full h-full object-cover opacity-30"
 									loading="lazy"
 								/>
 							</picture>
@@ -934,7 +790,7 @@ const Home = () => {
 								</div>
 								<ul className="list-none m-0 px-6 w-full lg:w-1/3 mt-8 md:mt-0">
 									<li className="mb-2.5">
-										<h3 className="normal-case text-2xl text-zinc-200">
+										<h3 className="uppercase text-2xl text-zinc-200">
 											<a
 												href="tel:+34678124694"
 												title="Contacta'ns per Whatsapp"
@@ -965,7 +821,7 @@ const Home = () => {
 										</h3>
 									</li>
 									<li className="mb-2.5">
-										<h3 className="normal-case text-2xl text-zinc-50">
+										<h3 className="uppercase text-2xl text-zinc-50">
 											<a
 												href="tel:+34678124694"
 												title="Contacta'ns per telèfon"
@@ -995,7 +851,7 @@ const Home = () => {
 										</h3>
 									</li>
 									<li>
-										<h3 className="normal-case text-2xl text-zinc-50">
+										<h3 className="uppercase text-2xl text-zinc-50">
 											<a
 												href="mailto:jordifh93@hotmail.es"
 												title="Contacta'ns per correu electrònic"

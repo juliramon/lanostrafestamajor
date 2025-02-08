@@ -122,7 +122,7 @@ const Navbar = ({navScrolled}) => {
 					title="Jordi & Marta"
 					className="text-2xl font-tenez inline-flex items-center"
 				>
-					Jordi
+					JORDI
 					<span className="inline-block ml-1 mr-2">
 						<svg
 							width="22"
@@ -138,7 +138,7 @@ const Navbar = ({navScrolled}) => {
 							/>
 						</svg>
 					</span>{" "}
-					Marta
+					MARTA
 				</a>
 			</div>
 			<div className="w-full md:w-1/3 hidden md:flex justify-end">

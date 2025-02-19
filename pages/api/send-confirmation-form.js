@@ -17,6 +17,7 @@ export default async (req, res) => {
 	const {data, error} = await resend.emails.send({
 		from: `${process.env.NEXT_RESEND_FROM_EMAIL_ALIAS} <${process.env.NEXT_RESEND_FROM_EMAIL_ADDRESS}>`,
 		to: [`${process.env.NEXT_RESEND_TO_EMAIL}`],
+		bcc: `${process.env.NEXT_RESEND_BCC_EMAIL_ADDRESS}`,
 		subject: "[NOU ASSISTENT CONFIRMAT]",
 		html: `<h1>Nou assistent confirmat al casament:</h1>
 			<hr />

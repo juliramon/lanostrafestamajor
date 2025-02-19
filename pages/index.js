@@ -122,7 +122,7 @@ const Home = () => {
 						<img
 							src="/organic-texture.jpg"
 							alt=""
-							class="w-full h-full object-cover"
+							className="w-full h-full object-cover"
 							loading="eager"
 						/>
 					</picture>

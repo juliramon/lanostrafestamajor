@@ -1,7 +1,6 @@
 import Head from "next/head";
 import {useState} from "react";
 import Navbar from "../components/global/Navbar";
-import EmailService from "../services/emailService";
 import FormToast from "../components/toasts/FormToast";
 
 const ConfirmarAssistencia = () => {
@@ -87,9 +86,7 @@ const ConfirmarAssistencia = () => {
 		}
 	};
 
-	const emailService = new EmailService();
-
-	const handleSubmit = (
+	const handleSubmit = async (
 		firstName,
 		surName,
 		phone,
@@ -99,8 +96,9 @@ const ConfirmarAssistencia = () => {
 		hasSpecialDiet,
 		specialDiet
 	) => {
-		emailService
-			.sendConfirmAttendance(
+		const response = await fetch("/api/send-confirmation-form", {
+			method: "POST",
+			body: JSON.stringify({
 				firstName,
 				surName,
 				phone,
@@ -108,34 +106,32 @@ const ConfirmarAssistencia = () => {
 				hasFoodAllergy,
 				foodAllergies,
 				hasSpecialDiet,
-				specialDiet
-			)
-			.then((res) => {
-				if (res.status === 200) {
-					setFormData({
-						firstName: "",
-						surName: "",
-						phone: "",
-						email: "",
-						hasFoodAllergy: "false",
-						foodAllergies: "",
-						hasSpecialDiet: "false",
-						specialDiet: "",
-						serverMessage:
-							"Formulari enviat correctament! Moltes gràcies per confirmar assistència :)",
-					});
-					setToastState({
-						...formData,
-						isVisible: true,
-						duration: 5000,
-					});
-					setTimeout(
-						() => setToastState({...toastState, isVisible: false}),
-						8000
-					);
-				}
-			})
-			.catch((error) => console.error(error));
+				specialDiet,
+			}),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+
+		if (response.status === 200) {
+			setFormData({
+				firstName: "",
+				surName: "",
+				phone: "",
+				email: "",
+				hasFoodAllergy: "false",
+				foodAllergies: "",
+				hasSpecialDiet: "false",
+				specialDiet: "",
+				serverMessage:
+					"Formulari enviat correctament! Moltes gràcies per confirmar assistència :)",
+			});
+			setToastState({...formData, isVisible: true, duration: 5000});
+			setTimeout(
+				() => setToastState({...toastState, isVisible: false}),
+				8000
+			);
+		}
 	};
 
 	const notification = toastState.isVisible ? (

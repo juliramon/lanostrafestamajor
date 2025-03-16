@@ -83,7 +83,7 @@ const Navbar = ({navScrolled}) => {
 								Els nuvis
 							</a>
 						</li>
-						<li>
+						{/* <li>
 							<a
 								href="/#viatge"
 								title="El viatge de noces"
@@ -92,7 +92,7 @@ const Navbar = ({navScrolled}) => {
 							>
 								El viatge de noces
 							</a>
-						</li>
+						</li> */}
 						<li>
 							<a
 								href="/#faqs"
